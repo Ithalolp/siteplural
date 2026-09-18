@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Plural Criativo — Produção Audiovisual Criativa</title>
+    <meta
+      name="description"
+      content="Transformamos ideias em experiências visuais impactantes através da produção audiovisual criativa."
+    />
+    <meta
+      name="keywords"
+      content="produção audiovisual, vídeos institucionais, motion graphics, design gráfico, estratégia de conteúdo"
+    />
+    <meta name="theme-color" content="#2f7be6" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Plural Criativo — Produção Audiovisual Criativa"
+    />
+    <meta
+      property="og:description"
+      content="Transformamos ideias em experiências visuais impactantes."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Meta para JS -->
+    <meta name="theme-path" content="." />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header" id="mainHeader">
+      <div class="container">
+        <div class="header-inner">
+          <a href="#top" class="brand">
+            <img
+              src="assets/img/logoplu.png"
+              alt="Plural Criativo"
+              class="brand-logo"
+              width="200"
+              height="50"
+            />
+          </a>
+
+          <nav class="main-nav" aria-label="Navegação principal">
+            <button
+              id="navToggleSticky"
+              class="nav-toggle"
+              aria-expanded="false"
+              aria-label="Abrir/fechar menu"
+            >
+              <i class="fas fa-bars" aria-hidden="true"></i>
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <ul id="navListSticky" class="nav-list">
+              <li><a href="#top" class="active">Início</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#gallery">Artes</a></li>
+              <li><a href="#equipe">Equipe</a></li>
+              <li>
+                <a href="#contato" class="btn btn-primary btn-sm">Contato</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+      <!-- HERO -->
+      <section class="hero" id="top" aria-label="Hero section">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/img/hero-poster.jpg"
+          class="hero-video"
+          onerror="this.style.display = 'none'"
+        >
+          <source src="assets/videos/video1-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <h1 class="hero-title fill-words">
+            <div class="line-1">
+              <span data-text="Criamos">Criamos</span>
+              <span data-text="experiências">experiências</span>
+            </div>
+            <div class="line-2">
+              <span data-text="visuais">visuais</span>
+              <span data-text="que">que</span>
+              <span data-text="emocionam">emocionam</span>
+            </div>
+          </h1>
+          <p class="hero-subtitle">Conectando pessoas às suas histórias</p>
+
+          <div class="btn-group">
+            <a href="#portfolio" class="btn btn-primary">
+              <i class="fas fa-play-circle"></i>
+              Ver Portfólio
+            </a>
+            <a href="#contato" class="btn btn-outline">
+              <i class="fas fa-comment"></i>
+              Fale Conosco
+            </a>
+          </div>
+        </div>
+
+        <a
+          href="#portfolio"
+          class="scroll-indicator"
+          aria-label="Scroll para mais conteúdo"
+        >
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </section>
+
+      <!-- CLIENTES MARQUEE -->
+      <section class="clients-section" aria-label="Nossos clientes">
+        <div class="container">
+          <div class="marquee-container">
+            <div class="marquee-track">
+              <img
+                src="assets/img/logo-cliente-adidas.jpg"
+                alt="Cliente 1"
+                class="client-logo"
+                width="120"
+                height="40"
+              />
+              <img
+                src="assets/img/logo-cliente-adidas.jpg"
+                alt="Cliente 2"
+                class="client-logo"
+                width="120"
+                height="40"
+              />
+              <img
+                src="assets/img/logo-cliente-adidas.jpg"
+                alt="Cliente 3"
+                class="client-logo"
+                width="120"
+                height="40"
+              />
+              <img
+                src="assets/img/logo-cliente-adidas.jpg"
+                alt="Cliente 4"
+                class="client-logo"
+                width="120"
+                height="40"
+              />
+              <img
+                src="assets/img/logo-cliente-adidas.jpg"
+                alt="Cliente 5"
+                class="client-logo"
+                width="120"
+                height="40"
+              />
+              <img
+                src="assets/img/logo-cliente-adidas.jpg"
+                alt="Cliente 6"
+                class="client-logo"
+                width="120"
+                height="40"
+              />
+              <img
+                src="assets/img/logo-cliente-adidas.jpg"
+                alt="Cliente 7"
+                class="client-logo"
+                width="120"
+                height="40"
+              />
+              <img
+                src="assets/img/logo-cliente-adidas.jpg"
+                alt="Cliente 8"
+                class="client-logo"
+                width="120"
+                height="40"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFÓLIO -->
+      <section id="portfolio" class="section reveal">
+        <div class="container">
+          <div class="section-title">
+            <h2>Nossos Destaques</h2>
+            <p class="section-subtitle">
+              Projetos selecionados que mostram nossa paixão por contar
+              histórias visuais
+            </p>
+          </div>
+
+          <div class="portfolio-grid">
+            <!-- Projeto 1 -->
+            <article
+              class="portfolio-item"
+              data-video="assets/videos/video1-hero.mp4"
+              tabindex="0"
+            >
+              <div class="thumb">
+                <span class="play-indicator" aria-hidden="true">
+                  <i class="fas fa-play"></i>
+                </span>
+                <img
+                  src="assets/img/Imagem 1.png"
+                  alt="Projeto Institucional"
+                  loading="lazy"
+                />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Vídeo Institucional</span>
+                  <h3>TechCorp Brand Story</h3>
+                  <p>
+                    Narrativa visual que transformou a comunicação corporativa
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projeto 2 -->
+            <article
+              class="portfolio-item"
+              data-video="assets/videos/project-2.mp4"
+              tabindex="0"
+            >
+              <div class="thumb">
+                <span class="play-indicator" aria-hidden="true">
+                  <i class="fas fa-play"></i>
+                </span>
+                <img
+                  src="assets/img/portfolio/project-2.jpg"
+                  alt="Campanha Digital"
+                  loading="lazy"
+                />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Campanha Digital</span>
+                  <h3>Fashion Forward 2024</h3>
+                  <p>
+                    Conteúdo viral para redes sociais com engajamento recorde
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projeto 3 -->
+            <article
+              class="portfolio-item"
+              data-video="assets/videos/project-3.mp4"
+              tabindex="0"
+            >
+              <div class="thumb">
+                <span class="play-indicator" aria-hidden="true">
+                  <i class="fas fa-play"></i>
+                </span>
+                <img
+                  src="assets/img/project-3.jpg"
+                  alt="Documentário"
+                  loading="lazy"
+                />
+                <div class="portfolio-overlay">
+                  <span class="portfolio-category">Documentário</span>
+                  <h3>Vozes da Amazônia</h3>
+                  <p>Histórias reais que inspiram mudanças e conscientização</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVIÇOS -->
+      <section id="servicos" class="section alt reveal">
+        <div class="container">
+          <div class="section-title">
+            <h2>Serviços Especializados</h2>
+            <p class="section-subtitle">
+              Soluções completas para sua presença audiovisual
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card reveal">
+              <div class="service-icon">🎬</div>
+              <h3>Produção de Vídeo</h3>
+              <p>
+                Desenvolvemos soluções criativas e estratégicas para fortalecer
+                sua marca.
+              </p>
+              <ul class="service-features">
+                <li>Roteiro e direção</li>
+                <li>Filmagem profissional</li>
+                <li>Edição e color grading</li>
+              </ul>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="service-icon">✨</div>
+              <h3>Motion Graphics</h3>
+              <p>
+                Produzimos animações marcantes que explicam ideias e encantam
+                clientes.
+              </p>
+              <ul class="service-features">
+                <li>Animações 2D/3D</li>
+                <li>Infográficos animados</li>
+                <li>Vinhetas personalizadas</li>
+              </ul>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="service-icon">🎨</div>
+              <h3>Design Visual</h3>
+              <p>
+                Criamos identidade visual e recursos gráficos que fortalecem sua
+                marca.
+              </p>
+              <ul class="service-features">
+                <li>Branding completo</li>
+                <li>Social media design</li>
+                <li>Materiais promocionais</li>
+              </ul>
+            </div>
+
+            <div class="service-card reveal">
+              <div class="service-icon">🚀</div>
+              <h3>Estratégia Digital</h3>
+              <p>
+                Planejamento e análise focados em maximizar o impacto do seu
+                conteúdo.
+              </p>
+              <ul class="service-features">
+                <li>Plano de conteúdo</li>
+                <li>Análise de performance</li>
+                <li>Otimização para plataformas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTES VISUAIS -->
+      <section id="gallery" class="gallery section">
+        <div class="container">
+          <h2 class="section-title">Artes Visuais</h2>
+          <p class="section-subtitle">
+            Inspire-se nos projetos que ganharam vida e forma com a nossa
+            equipe.
+          </p>
+
+          <div class="gallery-grid">
+            <div class="art-card reveal">
+              <a
+                href="#"
+                class="art-link"
+                aria-label="Ver Projeto: Projeto Alpha"
+              >
+                <div class="art-image-container">
+                  <img
+                    src="assets/img/Imagem 1.png"
+                    alt="Imagem 1"
+                    loading="lazy"
+                    onerror="
+                      this.onerror = null;
+                      this.src =
+                        'https://placehold.co/800x600/1e293b/f8fafc?text=ARTE+VISUAL+4:3';
+                    "
+                  />
+                </div>
+                <div class="art-info">
+                  <h3>Projeto</h3>
+                  <p>
+                    Estratégia completa de vídeo marketing e motion graphics.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="art-card reveal">
+              <a
+                href="#"
+                class="art-link"
+                aria-label="Ver Projeto: Vídeo Institucional"
+              >
+                <div class="art-image-container">
+                  <img
+                    src="assets/img/Imagem 2.png"
+                    alt="Imagem 2"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="art-info">
+                  <h3>Projeto 2</h3>
+                  <p>
+                    Documentário de marca focado em cultura e valores internos.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="art-card reveal">
+              <a
+                href="#"
+                class="art-link"
+                aria-label="Ver Projeto: Animação 3D"
+              >
+                <div class="art-image-container">
+                  <img
+                    src="assets/img/Imagem 3.png"
+                    alt="Imagem 3"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="art-info">
+                  <h3>Projeto 3</h3>
+                  <p>
+                    Modelagem e animação de um produto complexo para fácil
+                    compreensão.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EQUIPE -->
+      <section id="equipe" class="section alt reveal">
+        <div class="container">
+          <div class="section-title">
+            <h2>Nossa Equipe</h2>
+            <p class="section-subtitle">
+              Especialistas apaixonados por transformar ideias em realidade
+            </p>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-member reveal">
+              <div class="member-photo">
+                <img
+                  src="assets/img/imagem-eqp-1.jpg"
+                  alt="Carlos Varela"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Carlos Varela</h3>
+              <p class="muted">Diretor Criativo</p>
+              <p>+ anos de experiência em produção audiovisual</p>
+              <div class="social-links">
+                <a
+                  href="https://www.instagram.com/carlosvarela.pro/"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="team-member reveal">
+              <div class="member-photo">
+                <img
+                  src="assets/img/imagem-eqp-2.jpg"
+                  alt="Maria Santos"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Pessoa 2</h3>
+              <p class="muted">Designer</p>
+              <p>Especialista em animações 3D e efeitos visuais</p>
+              <div class="social-links">
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="team-member reveal">
+              <div class="member-photo">
+                <img
+                  src="assets/img/imagem-eqp-3.jpg"
+                  alt="Pedro Oliveira"
+                  loading="lazy"
+                />
+              </div>
+              <h3>Pessoa 3</h3>
+              <p class="muted">Editor</p>
+              <p>Expert em color grading e storytelling visual</p>
+              <div class="social-links">
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato" class="section reveal">
+        <div class="container">
+          <div class="section-title">
+            <h2>Vamos Conversar</h2>
+            <p class="section-subtitle">
+              Pronto para transformar sua visão em conteúdo impactante?
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Formulário -->
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Nome Completo *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  placeholder="Seu nome"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="seu@email.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="company">Empresa</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="form-control"
+                  placeholder="(opcional)"
+                  autocomplete="organization"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="project">Tipo de Projeto</label>
+                <select id="project" name="project" class="form-control">
+                  <option value="">Selecione uma opção</option>
+                  <option value="Producao de Video">
+                    🎬 Produção de Vídeo
+                  </option>
+                  <option value="Motion Graphics">✨ Motion Graphics</option>
+                  <option value="Design Grafico">🎨 Design Gráfico</option>
+                  <option value="Estrategia de Conteudo">
+                    🚀 Estratégia de Conteúdo
+                  </option>
+                  <option value="Outro">💡 Outro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensagem *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  placeholder="Conte-nos sobre seu projeto, ideias, orçamento e prazos..."
+                  rows="6"
+                  required
+                ></textarea>
+                <div class="char-counter" id="charCounter">0/1000</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Enviar Mensagem
+              </button>
+            </form>
+
+            <!-- Informações de Contato -->
+            <div class="contact-info">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h3>Nossa Localização</h3>
+                  <p>
+                    Rua. Presidente Vargas<br />Parte de cima do burundangas<br />63250-000
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h3>Telefone</h3>
+                  <p><a href="tel:+5588994462677">(88) 99446-2677</a></p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h3>Horário Comercial</h3>
+                  <p>Segunda - Sexta: 8h às 18h<br />Sábado: 8h às 12h</p>
+                </div>
+              </div>
+
+              <div class="social-links-large">
+                <a
+                  href="https://instagram.com/pluralcriativo"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+
+              <div class="contact-cta">
+                <h3 class="contact-cta-title">Tem um projeto em mente?</h3>
+                <p class="contact-cta-text">
+                  Conte sua ideia para nossa equipe. Vamos transformar sua visão
+                  em realidade.
+                </p>
+                <a
+                  href="https://wa.me/5588994462677"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-primary contact-cta-btn"
+                  aria-label="Falar no WhatsApp"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                  Falar no WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL DE VÍDEO -->
+      <div
+        id="modal"
+        class="modal"
+        aria-hidden="true"
+        role="dialog"
+        aria-label="Player de vídeo"
+      >
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+          <button class="modal-close" id="modalClose" aria-label="Fechar vídeo">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="modal-video">
+            <video id="modalVideo" controls playsinline preload="metadata">
+              Seu navegador não suporta a tag de vídeo.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTÃO VOLTAR AO TOPO -->
+      <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Voltar ao topo da página"
+        title="Voltar ao topo"
+      >
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h3>Sobre Nós</h3>
+            <p class="footer-text">
+              Transformamos ideias em experiências visuais impactantes através
+              da produção audiovisual criativa.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3>Serviços</h3>
+            <ul class="footer-links">
+              <li><a href="#servicos">Produção de Vídeo</a></li>
+              <li><a href="#servicos">Motion Graphics</a></li>
+              <li><a href="#servicos">Design Gráfico</a></li>
+              <li><a href="#servicos">Estratégia de Conteúdo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Links Rápidos</h3>
+            <ul class="footer-links">
+              <li><a href="#portfolio">Portfólio</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#gallery">Artes</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Política</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="paginas/politica-de-privacidade.html"
+                  >Política de Privacidade</a
+                >
+              </li>
+              <li><a href="paginas/termos-de-uso.html">Termos de Uso</a></li>
+              <li>
+                <a href="paginas/politica-de-cookies.html"
+                  >Política de Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="year"></span> Plural Criativo. Todos os direitos
+            reservados.
+          </p>
+          <p>
+            Desenvolvido por
+            <a
+              href="https://www.instagram.com/ithalo.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color: inherit; text-decoration: none"
+              >Antonio Ithalo</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/fun.js"></script>
+  </body>
+</html>

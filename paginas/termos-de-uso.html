@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Termos de Uso — Plural Criativo</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary-500: #2f7be6;
+        --primary-400: #4aa3ff;
+        --primary-600: #1e61c0;
+        --white: #ffffff;
+        --gray-50: #f8fafc;
+        --gray-100: #f1f5f9;
+        --gray-200: #e2e8f0;
+        --gray-700: #334155;
+        --gray-800: #1e293b;
+        --gray-900: #0f172a;
+        --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--gray-50);
+        color: var(--gray-800);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 20px 0;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid var(--gray-200);
+        transition: var(--transition);
+      }
+
+      header.scrolled {
+        padding: 15px 0;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        text-decoration: none;
+        letter-spacing: -1px;
+      }
+
+      .logo span {
+        color: var(--primary-500);
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        align-items: center;
+      }
+
+      nav a {
+        color: var(--gray-700);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: var(--transition);
+      }
+
+      nav a:hover {
+        color: var(--primary-500);
+      }
+
+      .policy-hero {
+        padding: 160px 0 40px;
+        text-align: center;
+        background: var(--white);
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .policy-hero h1 {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+        margin-bottom: 10px;
+        color: var(--gray-900);
+      }
+
+      .policy-hero p {
+        color: var(--primary-500);
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      .content-wrap {
+        max-width: 900px;
+        margin: 60px auto 100px;
+        padding: 0 25px;
+      }
+
+      .card {
+        background: var(--white);
+        border: 1px solid var(--gray-200);
+        border-radius: 24px;
+        padding: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+      }
+
+      .card h2 {
+        font-family: "Outfit", sans-serif;
+        color: var(--gray-900);
+        margin: 40px 0 20px;
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .card h2::before {
+        content: "";
+        width: 4px;
+        height: 28px;
+        background: var(--primary-500);
+        border-radius: 2px;
+      }
+
+      .card h2:first-child {
+        margin-top: 0;
+      }
+
+      .card p {
+        color: var(--gray-700);
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .card ul {
+        margin-bottom: 20px;
+        padding-left: 20px;
+        color: var(--gray-700);
+      }
+
+      .card li {
+        margin-bottom: 10px;
+      }
+
+      .card strong {
+        color: var(--primary-500);
+      }
+
+      footer {
+        background: var(--white);
+        padding: 80px 0 40px;
+        border-top: 1px solid var(--gray-200);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 60px;
+        max-width: 1200px;
+        margin: 0 auto 60px;
+        padding: 0 25px;
+      }
+
+      .footer-logo {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 20px;
+        display: block;
+        text-decoration: none;
+      }
+
+      .footer-logo span {
+        color: var(--primary-500);
+      }
+
+      .footer-desc {
+        color: var(--gray-700);
+        max-width: 320px;
+      }
+
+      .footer-col h4 {
+        color: var(--gray-900);
+        margin-bottom: 25px;
+        font-family: "Outfit", sans-serif;
+      }
+
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-col li {
+        margin-bottom: 12px;
+      }
+      .footer-col a {
+        color: var(--gray-700);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+      .footer-col a:hover {
+        color: var(--primary-500);
+        padding-left: 5px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 1px solid var(--gray-200);
+        color: var(--gray-500);
+        font-size: 0.85rem;
+      }
+
+      #btnTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--primary-500);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        display: none;
+        cursor: pointer;
+        z-index: 1001;
+        box-shadow: 0 10px 20px rgba(47, 123, 230, 0.3);
+        transition: 0.3s;
+      }
+
+      @media (max-width: 768px) {
+        .nav-desktop {
+          display: none;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          padding: 30px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="mainHeader">
+      <div class="container">
+        <a href="../index.html" class="logo">PLURAL<span>.</span></a>
+        <nav class="nav-desktop">
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="policy-hero">
+        <p>Contrato de Utilização</p>
+        <h1>Termos de Uso</h1>
+      </section>
+
+      <section class="content-wrap">
+        <div class="card">
+          <article>
+            <h2>1. Aceitação dos Termos</h2>
+            <p>
+              Ao aceder ao site da <strong>Plural Criativo</strong>, o
+              utilizador concorda em cumprir estes termos de serviço, todas as
+              leis e regulamentos aplicáveis. Se não concordar com algum destes
+              termos, está proibido de usar ou aceder a este site.
+            </p>
+
+            <h2>2. Licença de Uso</h2>
+            <p>
+              É concedida permissão para descarregar temporariamente uma cópia
+              dos materiais (informações ou software) no site Plural Criativo,
+              apenas para visualização pessoal e não comercial. Esta é a
+              concessão de uma licença, não uma transferência de título e, sob
+              esta licença, você não pode:
+            </p>
+            <ul>
+              <li>Modificar ou copiar os materiais;</li>
+              <li>
+                Usar os materiais para qualquer finalidade comercial ou para
+                exibição pública;
+              </li>
+              <li>
+                Remover quaisquer direitos de autor ou outras notações de
+                propriedade dos materiais.
+              </li>
+            </ul>
+
+            <h2>3. Isenção de Responsabilidade</h2>
+            <p>
+              Os materiais no site da Plural Criativo são fornecidos 'como
+              estão'. A Plural Criativo não oferece garantias, expressas ou
+              implícitas, e, por este meio, isenta e nega todas as outras
+              garantias, incluindo, sem limitação, garantias implícitas ou
+              condições de comercialização.
+            </p>
+
+            <h2>4. Limitações</h2>
+            <p>
+              Em nenhum caso a Plural Criativo ou os seus fornecedores serão
+              responsáveis por quaisquer danos (incluindo, sem limitação, danos
+              por perda de dados ou lucro ou devido a interrupção dos negócios)
+              decorrentes do uso ou da incapacidade de usar os materiais.
+            </p>
+
+            <h2>5. Precisão dos Materiais</h2>
+            <p>
+              Os materiais exibidos no site podem incluir erros técnicos,
+              tipográficos ou fotográficos. A Plural Criativo não garante que
+              qualquer material no seu site seja preciso, completo ou atual.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">PLURAL<span>.</span></a>
+          <p class="footer-desc">
+            Transformando ideias em experiências visuais de alto impacto.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="politica-de-privacidade.html">Privacidade</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="../index.html#contato">Contato</a></li>
+            <li><a href="politica-de-cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year"></span> Plural Criativo. Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+
+    <button id="btnTop"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+      window.onscroll = function () {
+        const header = document.getElementById("mainHeader");
+        const btn = document.getElementById("btnTop");
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          header.classList.add("scrolled");
+          btn.style.display = "block";
+        } else {
+          header.classList.remove("scrolled");
+          btn.style.display = "none";
+        }
+      };
+
+      document.getElementById("btnTop").onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
