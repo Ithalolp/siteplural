@@ -1,0 +1,1141 @@
+/* ============================================= */
+/* PORTFÓLIO — PÁGINA DEDICADA                   */
+/* Cores e alinhamentos alinhados à home         */
+/* Estrutura inspirada em catálogo audiovisual   */
+/* ============================================= */
+
+.portfolio-page {
+  --pf-gap: clamp(0.75rem, 1.15vw, 1.125rem);
+  --pf-section-gap: clamp(1rem, 1.8vw, 1.5rem);
+  --pf-container-wide: 1480px;
+  --pf-row-offset: 0px;
+  --pf-header-height: 88px;
+  --pf-hero-max: 1720px;
+  --pf-hero-radius: clamp(12px, 1.6vw, 22px);
+  background: var(--dark-bg);
+  color: #ffffff;
+  padding-bottom: 0;
+  overflow-x: clip;
+}
+
+.portfolio-page .container {
+  max-width: var(--pf-container-wide);
+  width: 100%;
+  padding: 0 var(--gutter);
+  margin: 0 auto;
+}
+
+body.page-template-page-portfolio-php {
+  overflow-x: clip;
+}
+
+/* ============================================= */
+/* HEADER MAIS ALTO — SOMENTE NA PÁGINA DE PORTFÓLIO */
+/* ============================================= */
+
+.site-header--portfolio,
+body.page-template-page-portfolio-php .site-header {
+  min-height: var(--pf-header-height, 88px);
+  padding-top: clamp(0.75rem, 1.2vw, 1.125rem) !important;
+  padding-bottom: clamp(0.75rem, 1.2vw, 1.125rem) !important;
+  transition:
+    padding var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.site-header--portfolio .nav-list--portfolio a,
+body.page-template-page-portfolio-php .site-header .nav-list--portfolio a {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.site-header--portfolio .site-logo img,
+body.page-template-page-portfolio-php .site-header .site-logo img {
+  max-height: clamp(36px, 3.2vw, 48px);
+  width: auto;
+  transition: max-height var(--transition-normal);
+}
+
+.site-header--portfolio.scrolled,
+body.page-template-page-portfolio-php .site-header.scrolled {
+  min-height: 64px;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.site-header--portfolio.scrolled .site-logo img,
+body.page-template-page-portfolio-php .site-header.scrolled .site-logo img {
+  max-height: 36px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-page {
+    --pf-header-height: 72px;
+  }
+
+  .site-header--portfolio,
+  body.page-template-page-portfolio-php .site-header {
+    min-height: 72px;
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+  }
+
+  .site-header--portfolio .site-logo img,
+  body.page-template-page-portfolio-php .site-header .site-logo img {
+    max-height: 34px;
+  }
+}
+
+/* ============================================= */
+/* BOTÃO VOLTAR — SÓ NO MOBILE, À DIREITA        */
+/* ============================================= */
+
+.pf-back-btn {
+  display: none; /* escondido no desktop */
+}
+
+@media (max-width: 991px) {
+  .pf-back-btn {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 1rem);
+    right: 1rem;
+    left: auto;
+    z-index: 9998;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.125rem;
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-full, 999px);
+    color: #ffffff !important;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    transition:
+      background var(--transition-fast),
+      border-color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .pf-back-btn:hover,
+  .pf-back-btn:focus-visible {
+    background: rgba(15, 23, 42, 0.9);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateX(2px);
+    outline: none;
+  }
+
+  .pf-back-btn:focus-visible {
+    outline: 3px solid var(--primary-400);
+    outline-offset: 3px;
+  }
+
+  .pf-back-btn i {
+    font-size: 0.8125rem;
+    transition: transform var(--transition-fast);
+  }
+
+  .pf-back-btn:hover i {
+    transform: translateX(-3px);
+  }
+}
+
+/* Em telas muito estreitas, esconde o texto e deixa só o ícone */
+@media (max-width: 380px) {
+  .pf-back-btn {
+    padding: 0.625rem;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .pf-back-btn span {
+    display: none;
+  }
+}
+
+/* ============================================= */
+/* HEADER — MOBILE: SEM LOGO E SEM MENU          */
+/* (só o botão "Voltar" à direita)               */
+/* ============================================= */
+
+@media (max-width: 991px) {
+  /* 1) Esconde TODA a navegação do header do portfólio */
+  body.page-template-page-portfolio-php .site-header .nav-list--portfolio,
+  body.page-template-page-portfolio-php .site-header nav,
+  body.page-template-page-portfolio-php .site-header .site-nav,
+  body.page-template-page-portfolio-php .site-header .main-navigation,
+  body.page-template-page-portfolio-php .site-header .primary-navigation {
+    display: none !important;
+  }
+
+  /* 2) Esconde a LOGO da Plural no header do portfólio */
+  body.page-template-page-portfolio-php .site-header .site-logo,
+  body.page-template-page-portfolio-php .site-header .logo,
+  body.page-template-page-portfolio-php .site-header .custom-logo-link,
+  body.page-template-page-portfolio-php .site-header .custom-logo,
+  body.page-template-page-portfolio-php .site-header .site-branding,
+  body.page-template-page-portfolio-php .site-header .branding,
+  body.page-template-page-portfolio-php .site-header a[href*="home"],
+  body.page-template-page-portfolio-php .site-header > a:first-child,
+  body.page-template-page-portfolio-php .site-header img[class*="logo"],
+  body.page-template-page-portfolio-php .site-header img[alt*="logo" i],
+  body.page-template-page-portfolio-php .site-header img[alt*="plural" i] {
+    display: none !important;
+  }
+
+  /* 3) Esconde QUALQUER botão de menu/toggle dentro do header */
+  body.page-template-page-portfolio-php .site-header .menu-toggle,
+  body.page-template-page-portfolio-php .site-header .nav-toggle,
+  body.page-template-page-portfolio-php .site-header .hamburger,
+  body.page-template-page-portfolio-php .site-header .menu-btn,
+  body.page-template-page-portfolio-php .site-header .menu-button,
+  body.page-template-page-portfolio-php .site-header .mobile-menu-toggle,
+  body.page-template-page-portfolio-php .site-header .mobile-toggle,
+  body.page-template-page-portfolio-php .site-header .menu-icon,
+  body.page-template-page-portfolio-php .site-header [data-toggle="menu"],
+  body.page-template-page-portfolio-php .site-header [data-menu-toggle],
+  body.page-template-page-portfolio-php .site-header [aria-controls*="menu" i],
+  body.page-template-page-portfolio-php .site-header [aria-label*="menu" i],
+  body.page-template-page-portfolio-php
+    .site-header
+    [aria-label*="abrir menu" i],
+  body.page-template-page-portfolio-php .site-header button[class*="toggle"],
+  body.page-template-page-portfolio-php .site-header button[class*="hamburger"],
+  body.page-template-page-portfolio-php .site-header button[class*="dots"],
+  body.page-template-page-portfolio-php .site-header button[class*="kebab"] {
+    display: none !important;
+  }
+
+  /* 4) Esconde o botão de menu que fica FORA do .site-header (wrapper comum em temas) */
+  body.page-template-page-portfolio-php .menu-toggle,
+  body.page-template-page-portfolio-php .nav-toggle,
+  body.page-template-page-portfolio-php .hamburger,
+  body.page-template-page-portfolio-php .mobile-menu-toggle {
+    display: none !important;
+  }
+
+  /* 5) Header fica sem conteúdo — o botão Voltar (fixed) ocupa a direita */
+  body.page-template-page-portfolio-php .site-header .container,
+  body.page-template-page-portfolio-php .site-header .header-inner {
+    justify-content: flex-end;
+  }
+}
+
+/* ============================================= */
+/* HERO SLIDER EM VÍDEO — BLOCO MAIOR E DESTACADO */
+/* ============================================= */
+
+.pf-hero {
+  position: relative;
+  width: calc(100% - (var(--gutter) * 2));
+  max-width: var(--pf-hero-max);
+  margin: clamp(0.5rem, 1vw, 1rem) auto 0;
+  height: clamp(560px, 78vh, 780px);
+  min-height: 520px;
+  overflow: hidden;
+  background: #000;
+  isolation: isolate;
+  border-radius: var(--pf-hero-radius);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.pf-hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pf-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.pf-hero-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pf-hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  border-radius: inherit;
+}
+
+.pf-hero-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 23, 42, 0.7) 0%,
+      rgba(15, 23, 42, 0.15) 35%,
+      rgba(15, 23, 42, 0.85) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.65) 0%,
+      rgba(15, 23, 42, 0.05) 55%
+    );
+  pointer-events: none;
+}
+
+.pf-hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: var(--pf-header-height, var(--header-height));
+}
+
+.pf-hero-content .container {
+  width: 100%;
+  max-width: var(--pf-container-wide);
+  padding: 0 var(--gutter);
+}
+
+.pf-hero-eyebrow {
+  display: inline-block;
+  color: var(--primary-400);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: pfFadeUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.15s forwards;
+}
+
+.pf-hero-title {
+  font-size: clamp(1.875rem, 4.5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin: 0 0 1.75rem;
+  max-width: 22ch;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: pfFadeUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+}
+
+.pf-hero-title br {
+  display: block;
+}
+
+.pf-hero-play {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(
+    135deg,
+    var(--primary-500),
+    var(--creative-purple)
+  );
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition:
+    transform var(--transition-bounce),
+    box-shadow var(--transition-normal),
+    filter var(--transition-fast);
+  box-shadow: 0 10px 30px rgba(47, 123, 230, 0.4);
+  opacity: 0;
+  animation: pfFadeUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.45s forwards;
+}
+
+.pf-hero-play i {
+  font-size: 0.8125rem;
+}
+
+.pf-hero-play:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 45px rgba(47, 123, 230, 0.55);
+}
+
+.pf-hero-play:focus-visible {
+  outline: 3px solid var(--primary-400);
+  outline-offset: 3px;
+}
+
+.pf-hero-sound {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all var(--transition-normal);
+}
+
+.pf-hero-sound:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.pf-hero-sound[aria-pressed="true"] {
+  background: rgba(47, 123, 230, 0.35);
+  border-color: rgba(74, 163, 255, 0.65);
+}
+
+.pf-hero-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  width: min(500px, calc(100% - 6rem));
+  justify-content: center;
+}
+
+.pf-hero-indicator {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  transition: background var(--transition-fast);
+}
+
+.pf-hero-indicator:hover {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.pf-hero-indicator-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    var(--primary-500),
+    var(--creative-purple)
+  );
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.pf-hero-indicator.is-active .pf-hero-indicator-fill {
+  animation: pfProgress 7s linear forwards;
+}
+
+.pf-hero-indicator.is-active {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@keyframes pfProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes pfFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .pf-hero {
+    width: calc(100% - (var(--gutter) * 1.5));
+    height: clamp(480px, 68vh, 620px);
+    min-height: 460px;
+    border-radius: clamp(10px, 2vw, 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .pf-hero {
+    width: calc(100% - (var(--gutter) * 1.25));
+    height: clamp(420px, 64vh, 520px);
+    min-height: 400px;
+    margin-top: 0.5rem;
+  }
+
+  .pf-hero-content {
+    align-items: flex-end;
+    padding-bottom: 4.5rem;
+  }
+
+  .pf-hero-title {
+    font-size: clamp(1.625rem, 7vw, 2.25rem);
+    max-width: none;
+    margin-bottom: 1.25rem;
+  }
+
+  .pf-hero-play {
+    padding: 0.75rem 1.35rem;
+    font-size: 0.875rem;
+  }
+
+  .pf-hero-sound {
+    right: 1rem;
+    bottom: 3.75rem;
+    width: 38px;
+    height: 38px;
+  }
+
+  .pf-hero-indicators {
+    bottom: 1rem;
+    width: calc(100% - 2rem);
+  }
+}
+
+/* ============================================= */
+/* SEÇÕES EM LINHA — ALINHADAS E COMPACTAS       */
+/* ============================================= */
+
+.pf-row-section {
+  padding: var(--pf-section-gap) 0 0;
+  background: var(--dark-bg);
+  position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: 320px;
+}
+
+.pf-row-section:last-of-type {
+  padding-bottom: var(--pf-section-gap);
+}
+
+.pf-row-section + .pf-row-section {
+  padding-top: clamp(1.15rem, 2vw, 1.65rem);
+}
+
+.pf-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: clamp(0.7rem, 1.1vw, 1rem);
+}
+
+.pf-row-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.pf-row-title i {
+  color: var(--primary-400);
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+.pf-row-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pf-row-hint i {
+  transition: transform var(--transition-normal);
+}
+
+.pf-row-section:hover .pf-row-hint i {
+  transform: translateX(4px);
+}
+
+.pf-row-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.pf-row {
+  display: flex;
+  gap: var(--pf-gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 0.25rem
+    max(
+      var(--gutter),
+      calc((100vw - var(--pf-container-wide)) / 2 + var(--gutter))
+    )
+    0.5rem
+    max(
+      var(--gutter),
+      calc((100vw - var(--pf-container-wide)) / 2 + var(--gutter))
+    );
+
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+  contain: content;
+}
+
+@media (max-width: 1519px) {
+  .pf-row {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+}
+
+.pf-row::-webkit-scrollbar {
+  display: none;
+}
+
+.pf-row.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
+
+/* ============================================= */
+/* CARD                                          */
+/* ============================================= */
+
+.pf-card {
+  flex: 0 0 auto;
+  width: clamp(175px, 13.8vw, 220px);
+  scroll-snap-align: start;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: transform var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.pf-card:hover,
+.pf-card:focus-visible {
+  transform: translateY(-4px);
+}
+
+.pf-card:focus-visible .pf-card-media {
+  outline: 3px solid var(--primary-400);
+  outline-offset: 3px;
+}
+
+.pf-card-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--gray-900);
+  display: block;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.pf-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.4s ease;
+  filter: brightness(0.92);
+  background: var(--gray-900);
+}
+
+.pf-card:hover .pf-card-media img,
+.pf-card:focus-visible .pf-card-media img {
+  transform: scale(1.06);
+  filter: brightness(1);
+}
+
+.pf-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.5) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+
+.pf-card:hover .pf-card-media::after {
+  opacity: 1;
+}
+
+.pf-card-tag {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2;
+  background: linear-gradient(
+    135deg,
+    var(--primary-500),
+    var(--creative-purple)
+  );
+  color: #ffffff;
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(47, 123, 230, 0.45);
+}
+
+.pf-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  opacity: 0;
+  transition:
+    opacity var(--transition-normal),
+    transform var(--transition-bounce),
+    background var(--transition-normal);
+  pointer-events: none;
+}
+
+.pf-card-play i {
+  transform: translateX(2px);
+}
+
+.pf-card:hover .pf-card-play,
+.pf-card:focus-visible .pf-card-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  background: linear-gradient(
+    135deg,
+    var(--primary-500),
+    var(--creative-purple)
+  );
+  border-color: transparent;
+}
+
+.pf-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 3.7rem;
+}
+
+.pf-card-client {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-400);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pf-card-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.005em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color var(--transition-fast);
+}
+
+.pf-card:hover .pf-card-title {
+  color: var(--primary-300);
+}
+
+.pf-card-meta {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .pf-card {
+    width: 72vw;
+    max-width: 280px;
+  }
+
+  .pf-row {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  .pf-row-hint {
+    display: none;
+  }
+}
+
+/* ============================================= */
+/* MODAL DE VÍDEO — ACIMA DE TUDO                */
+/* ============================================= */
+
+.pf-modal {
+  position: fixed !important;
+  inset: 0;
+  z-index: 2147483647 !important;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  isolation: isolate;
+  contain: layout paint size;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.pf-modal.is-open {
+  display: flex;
+}
+
+.pf-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 28, 0.94);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  animation: pfFadeIn 0.3s ease;
+  cursor: pointer;
+  z-index: 0;
+}
+
+@keyframes pfFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pf-modal-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1180px;
+  animation: pfModalUp 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+@keyframes pfModalUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.pf-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 0.25rem;
+}
+
+.pf-modal-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.pf-modal-eyebrow {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-400);
+}
+
+.pf-modal-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1rem, 1.6vw, 1.375rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.pf-modal-meta {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+}
+
+.pf-modal-close {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.pf-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: rotate(90deg);
+}
+
+.pf-modal-close:focus-visible {
+  outline: 3px solid var(--primary-400);
+  outline-offset: 3px;
+}
+
+.pf-modal-video-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: clamp(10px, 1.4vw, 16px);
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  aspect-ratio: 16 / 9;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.pf-modal-video-wrap video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000;
+  object-fit: contain;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .pf-modal {
+    padding: 0.75rem;
+    align-items: flex-start;
+    padding-top: 4rem;
+  }
+
+  .pf-modal-header {
+    gap: 0.75rem;
+  }
+
+  .pf-modal-close {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9375rem;
+  }
+
+  .pf-modal-title {
+    font-size: 1rem;
+  }
+
+  .pf-modal-meta {
+    font-size: 0.6875rem;
+  }
+}
+
+/* ============================================= */
+/* RESPONSIVO GERAL                              */
+/* ============================================= */
+
+@media (max-width: 900px) {
+  .pf-row-header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+/* ============================================= */
+/* NAVEGAÇÃO — VARIANTE PORTFÓLIO                */
+/* ============================================= */
+
+.nav-list--portfolio li:first-child a {
+  padding-left: 1rem;
+  padding-right: 1.125rem;
+}
+
+.nav-list--portfolio li:first-child a i {
+  transition: transform var(--transition-fast);
+}
+
+.nav-list--portfolio li:first-child a:hover i {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 1280px) {
+  .nav-list--portfolio a {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.875rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-list--portfolio a {
+    font-size: 0.8125rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+.site-header--portfolio:not(.scrolled) {
+  background: rgba(15, 23, 42, 0.35) !important;
+  backdrop-filter: blur(10px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(140%) !important;
+}
+
+/* ============================================= */
+/* FOOTER NO PORTFÓLIO — MESMA COR DA PÁGINA    */
+/* ============================================= */
+
+.portfolio-page ~ .site-footer,
+body.page-template-page-portfolio-php .site-footer {
+  background: var(--dark-bg) !important;
+  margin-top: 0 !important;
+  padding-top: clamp(2rem, 3vw, 2.75rem) !important;
+  padding-bottom: clamp(1.25rem, 1.75rem) !important;
+}
+
+/* ============================================= */
+/* ACESSIBILIDADE — MOTION REDUZIDO              */
+/* ============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .pf-hero-slide,
+  .pf-card,
+  .pf-card-media img,
+  .pf-card-play,
+  .pf-row,
+  .pf-back-btn {
+    transition: none !important;
+  }
+
+  .pf-hero-eyebrow,
+  .pf-hero-title,
+  .pf-hero-play {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .pf-hero-indicator.is-active .pf-hero-indicator-fill {
+    animation: none !important;
+    transform: scaleX(1);
+  }
+}
