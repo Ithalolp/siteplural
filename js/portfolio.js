@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Se o href estiver vazio ou inválido, força o redirecionamento
       if (!backBtn.href || backBtn.href === "#" || backBtn.href === "") {
         e.preventDefault();
-        window.location.href = homeUrl || "/";
+        window.location.href = homeUrl || "index.html";
       }
     });
   }
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     );
     heroObs.observe(hero);
   }
@@ -206,14 +206,14 @@ document.addEventListener("DOMContentLoaded", function () {
       () => {
         row.classList.add("is-dragging");
       },
-      { passive: true },
+      { passive: true }
     );
     row.addEventListener(
       "touchend",
       () => {
         row.classList.remove("is-dragging");
       },
-      { passive: true },
+      { passive: true }
     );
 
     // Navegação por teclado dentro do carrossel
@@ -243,8 +243,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalVideo = document.getElementById("pfModalVideo");
   const modalClose = document.getElementById("pfModalClose");
   const modalTitle = document.getElementById("pfModalTitle");
+  const modalMeta = document.getElementById("pfModalMeta");
 
-  function openPortfolioModal(src, title) {
+  function openPortfolioModal(src, title, meta) {
     if (!modal || !modalVideo) return;
 
     modalVideo.src = src;
@@ -253,6 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modalVideo.load();
 
     if (modalTitle) modalTitle.textContent = title || "";
+    if (modalMeta) modalMeta.textContent = meta || "";
 
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
@@ -278,7 +280,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const trigger = () => {
       const src = card.getAttribute("data-video");
       const title = card.getAttribute("data-title") || "";
-      if (src) openPortfolioModal(src, title);
+      const meta = card.getAttribute("data-meta") || "";
+      if (src) openPortfolioModal(src, title, meta);
     };
     card.addEventListener("click", trigger);
     card.addEventListener("keydown", (e) => {
