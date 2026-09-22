@@ -4,6 +4,7 @@
 /* Estrutura inspirada em catálogo audiovisual   */
 /* ============================================= */
 
+
 .portfolio-page {
   --pf-gap: clamp(0.75rem, 1.15vw, 1.125rem);
   --pf-section-gap: clamp(1rem, 1.8vw, 1.5rem);
