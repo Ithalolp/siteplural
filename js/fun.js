@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     revealThreshold: 0.1,
     headerTransitionThreshold: 50,
     videoModalTransition: 300,
+    whatsappShowThreshold: 300, // px de scroll para mostrar o botão do WhatsApp
   };
 
   // =============================================
@@ -44,86 +45,36 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // =============================================
-  // 4. BOTÃO VOLTAR AO TOPO
+  // 4. BOTÃO FLUTUANTE WHATSAPP (aparece no scroll)
   // =============================================
 
-  function initBackToTop() {
-    console.log("🔼 Inicializando botão Voltar ao Topo");
+  function initWhatsAppButton() {
+    console.log("🟢 Inicializando botão WhatsApp");
 
-    const backToTopButton = document.getElementById("backToTop");
+    const whatsappButton = document.getElementById("whatsappFloat");
 
-    if (!backToTopButton) {
-      console.error(
-        '❌ Botão "Voltar ao Topo" não encontrado! Criando manualmente...',
-      );
-
-      const button = document.createElement("button");
-      button.id = "backToTop";
-      button.className = "back-to-top";
-      button.setAttribute("aria-label", "Voltar ao topo da página");
-      button.setAttribute("title", "Voltar ao topo");
-      button.innerHTML = '<i class="fas fa-chevron-up"></i>';
-      document.body.appendChild(button);
-
-      window.backToTopButton = button;
-    } else {
-      window.backToTopButton = backToTopButton;
-      console.log('✅ Botão "Voltar ao Topo" encontrado');
+    if (!whatsappButton) {
+      console.warn("⚠️ Botão WhatsApp não encontrado no DOM.");
+      return;
     }
 
-    const clientsSection = document.querySelector(".clients-section");
-
-    function checkScrollPosition() {
+    function checkScrollVisibility() {
       const scrollY = window.scrollY;
-      let shouldShow = false;
 
-      if (clientsSection) {
-        const clientsRect = clientsSection.getBoundingClientRect();
-        if (clientsRect.bottom < -50 || scrollY > 500) {
-          shouldShow = true;
-        }
+      if (scrollY > config.whatsappShowThreshold) {
+        whatsappButton.classList.add("visible");
       } else {
-        shouldShow = scrollY > 500;
-      }
-
-      if (scrollY < 100) {
-        shouldShow = false;
-      }
-
-      if (shouldShow) {
-        window.backToTopButton.classList.add("visible");
-      } else {
-        window.backToTopButton.classList.remove("visible");
+        whatsappButton.classList.remove("visible");
       }
     }
 
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+    // Verificação inicial (caso a página já esteja rolada ao carregar)
+    checkScrollVisibility();
 
-      setTimeout(() => {
-        const header = document.getElementById("mainHeader");
-        if (header) header.focus();
-      }, 500);
-    }
+    window.addEventListener("scroll", throttle(checkScrollVisibility, 100));
+    window.addEventListener("resize", debounce(checkScrollVisibility, 150));
 
-    window.backToTopButton.addEventListener("click", scrollToTop);
-
-    window.backToTopButton.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        scrollToTop();
-      }
-    });
-
-    setTimeout(checkScrollPosition, 500);
-    window.addEventListener("scroll", throttle(checkScrollPosition, 100));
-    window.addEventListener("resize", checkScrollPosition);
-    setTimeout(checkScrollPosition, 2000);
-
-    console.log('✅ Botão "Voltar ao Topo" inicializado com sucesso');
+    console.log("✅ Botão WhatsApp inicializado com sucesso");
   }
 
   // =============================================
@@ -131,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // =============================================
 
   const header = document.getElementById("mainHeader");
+  const heroSection = document.querySelector(".hero");
 
   function updateHeader() {
     const scrollY = window.scrollY;
@@ -274,7 +226,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (themePathElement) {
       return themePathElement.getAttribute("content");
     }
-    return ".";
+
+    const scripts = document.querySelectorAll('script[src*="fun.js"]');
+    if (scripts.length > 0) {
+      const scriptSrc = scripts[0].src;
+      const themeMatch = scriptSrc.match(/(\/wp-content\/themes\/[^/]+)/);
+      if (themeMatch) {
+        return themeMatch[1];
+      }
+    }
+
+    return "/wp-content/themes/seu-tema";
   }
 
   function openVideoModal(src) {
@@ -612,16 +574,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =============================================
-  // 13. ANIMAÇÃO DO MARQUEE
+  // 13. MARQUEE (MARCAS QUE ATENDEMOS)
   // =============================================
+  // A duplicação dos logos é feita em PHP (front-page.php), no bloco
+  // .brands-marquee-track. A função abaixo é mantida apenas para
+  // compatibilidade — não faz nada.
 
   function initMarquee() {
-    const marqueeTracks = document.querySelectorAll(".marquee-track");
-
-    marqueeTracks.forEach((track) => {
-      const content = track.innerHTML;
-      track.innerHTML += content;
-    });
+    // Intencionalmente vazia. Duplicação via PHP.
   }
 
   // =============================================
@@ -740,7 +700,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =============================================
-  // 16.5. OTIMIZAÇÃO DO VÍDEO DO HERO
+  // 17. OTIMIZAÇÃO DO VÍDEO DO HERO
   // =============================================
 
   function initHeroVideoOptimization() {
@@ -751,12 +711,16 @@ document.addEventListener("DOMContentLoaded", function () {
       "(prefers-reduced-motion: reduce)",
     ).matches;
 
+    // Em prefers-reduced-motion, nem inicia a reprodução: fica parado no poster.
     if (prefersReducedMotion) {
       heroVideo.pause();
       heroVideo.removeAttribute("autoplay");
       return;
     }
 
+    // Pausa o vídeo quando sai da viewport (ex.: usuário rolou a página) e
+    // retoma ao voltar. Isso reduz consumo de CPU/GPU em máquinas mais
+    // limitadas, já que um <video> decodificando fora de tela ainda pesa.
     if ("IntersectionObserver" in window) {
       const heroObserver = new IntersectionObserver(
         (entries) => {
@@ -776,7 +740,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =============================================
-  // 17. INICIALIZAÇÃO COMPLETA
+  // 18. INICIALIZAÇÃO COMPLETA
   // =============================================
 
   function init() {
@@ -793,7 +757,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateActiveNav();
     initHeroTitleAnimation();
     initHeroVideoOptimization();
-    initBackToTop();
+    initWhatsAppButton();
 
     document.querySelectorAll("section").forEach((section) => {
       section.style.opacity = "1";
@@ -808,7 +772,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =============================================
-  // 18. EVENT LISTENERS GLOBAIS
+  // 19. EVENT LISTENERS GLOBAIS
   // =============================================
 
   window.addEventListener("scroll", throttle(updateHeader, 100));
@@ -836,13 +800,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // =============================================
-  // 19. INICIALIZAR TUDO
+  // 20. INICIALIZAR TUDO
   // =============================================
 
   init();
 
   // =============================================
-  // 20. DEPURAÇÃO (APENAS EM DESENVOLVIMENTO)
+  // 21. DEPURAÇÃO (APENAS EM DESENVOLVIMENTO)
   // =============================================
 
   if (
@@ -854,11 +818,11 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("=== DEBUG INFO (AMBIENTE DE DESENVOLVIMENTO) ===");
 
       const criticalElements = {
-        "Botão Voltar ao Topo": document.getElementById("backToTop"),
         "Modal de Vídeo": document.getElementById("modal"),
         "Formulário de Contato": document.getElementById("contactForm"),
         "Menu Mobile": document.getElementById("navToggleSticky"),
         "Vídeo Hero": document.querySelector(".hero-video"),
+        "Botão WhatsApp": document.getElementById("whatsappFloat"),
       };
 
       Object.entries(criticalElements).forEach(([name, element]) => {
@@ -878,7 +842,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =============================================
-  // 21. EXPORTAR FUNÇÕES PARA DEBUG
+  // 22. EXPORTAR FUNÇÕES PARA DEBUG
   // =============================================
 
   window.PluralCriativo = {
@@ -887,15 +851,6 @@ document.addEventListener("DOMContentLoaded", function () {
     showNotification,
     updateHeader,
     updateActiveNav,
-    forceShowBackToTop: () => {
-      const btn = document.getElementById("backToTop");
-      if (btn) {
-        btn.classList.add("visible");
-        btn.style.opacity = "1";
-        btn.style.visibility = "visible";
-        btn.style.transform = "translateY(0)";
-      }
-    },
     testFormSubmission: () => {
       if (contactForm) {
         const testData = {
