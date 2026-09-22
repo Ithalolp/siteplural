@@ -1,3545 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Plural Criativo — Produção Audiovisual</title>
-    <meta name="description" content="Transformamos ideias em experiências visuais que conectam e emocionam.">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-/* ============================================= */
-/* DESIGN SYSTEM PROFISSIONAL - PLURAL CRIATIVO */
-/* ============================================= */
-
-:root {
-  /* Cores principais - Audiovisual */
-  --primary-500: #2f7be6;
-  --primary-400: #4aa3ff;
-  --primary-300: #6ab5ff;
-  --primary-200: #a8d4ff;
-  --primary-100: #e1f0ff;
-
-  /* Escala de cinzas sofisticada */
-  --gray-900: #0f172a;
-  --gray-800: #1e293b;
-  --gray-700: #334155;
-  --gray-600: #475569;
-  --gray-500: #64748b;
-  --gray-400: #94a3b8;
-  --gray-300: #cbd5e1;
-  --gray-200: #e2e8f0;
-  --gray-100: #f1f5f9;
-  --gray-50: #f8fafc;
-
-  /* Cores criativas */
-  --creative-magenta: #ec4899;
-  --creative-cyan: #06b6d4;
-  --creative-purple: #8b5cf6;
-  --creative-yellow: #f59e0b;
-
-  /* WhatsApp */
-  --whatsapp-green: #25d366;
-  --whatsapp-green-dark: #128c7e;
-
-  /* Sistema de sombras */
-  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 8px 30px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 20px 60px rgba(15, 23, 42, 0.12);
-  --shadow-xl: 0 32px 96px rgba(15, 23, 42, 0.16);
-
-  /* Sistema de bordas */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-full: 999px;
-
-  /* Transições */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-  /* Container */
-  --container: 1320px;
-  --gutter: clamp(1.25rem, 4vw, 2.5rem);
-
-  /* Altura da navbar fixa (compensação de conteúdo) */
-  --header-height: 82px;
-
-  /* Cores de seções escuras (unificadas) */
-  --dark-bg: var(--gray-800);
-  --dark-bg-alt: var(--gray-900);
-}
-
-/* ============================================= */
-/* RESET & BASE STYLES */
-/* ============================================= */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-body {
-  font-family:
-    "Poppins",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
-  line-height: 1.7;
-  color: var(--gray-900);
-  background: var(--gray-50);
-  overflow-x: visible;
-  padding-top: 0;
-}
-
-/* ============================================= */
-/* TYPOGRAPHY SYSTEM */
-/* ============================================= */
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-}
-
-h2 {
-  font-size: clamp(2.25rem, 4.2vw, 3.25rem);
-  margin-bottom: 1.75rem;
-}
-
-h3 {
-  font-size: clamp(1.5rem, 2.8vw, 2.15rem);
-}
-
-p {
-  font-size: 1.0625rem;
-  margin-bottom: 1.125rem;
-  line-height: 1.75;
-}
-
-.lead {
-  font-size: clamp(1.1875rem, 2vw, 1.375rem);
-  line-height: 1.7;
-  color: var(--gray-600);
-}
-
-.muted {
-  color: var(--gray-500);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ============================================= */
-/* CONTAINER */
-/* ============================================= */
-
-.container {
-  width: 100%;
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-}
-
-.section {
-  padding: clamp(4.5rem, 8vw, 8.5rem) 0;
-  position: relative;
-}
-
-.section.alt {
-  background: var(--gray-100);
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: clamp(1.25rem, 3vw, 2.25rem);
-}
-
-.section-eyebrow {
-  color: var(--primary-500);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.8125rem;
-  margin-bottom: 0.75rem;
-}
-
-.section-subtitle {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 3.5rem;
-  color: var(--gray-600);
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
-
-/* ============================================= */
-/* HEADER FIXO — GLASS ESCURO NO SCROLL          */
-/* ============================================= */
-
-.site-header,
-#mainHeader {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  width: 100% !important;
-  z-index: 9999 !important;
-  padding: 1rem 0 !important;
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  box-shadow: none !important;
-  border-bottom: 1px solid transparent !important;
-  transition:
-    background 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    padding 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    backdrop-filter 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    -webkit-backdrop-filter 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
-}
-
-.site-header.scrolled,
-#mainHeader.scrolled {
-  padding: 0.75rem 0 !important;
-  background: rgba(15, 23, 42, 0.72) !important;
-  backdrop-filter: blur(18px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(140%) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-body {
-  padding-top: 0 !important;
-}
-
-.hero {
-  padding-top: var(--header-height) !important;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 0.75rem;
-  z-index: 1002;
-}
-
-.brand-logo {
-  height: 50px;
-  width: auto;
-  transition: transform var(--transition-normal);
-}
-
-.brand:hover .brand-logo {
-  transform: scale(1.05);
-}
-
-/* ============================================= */
-/* NAVEGAÇÃO — DESKTOP (Refinada, Inter, animada)*/
-/* ============================================= */
-
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list a {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  color: #ffffff;
-  text-decoration: none;
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    sans-serif;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  letter-spacing: -0.01em;
-  text-transform: none;
-  padding: 0.625rem 1.125rem;
-  border-radius: var(--radius-full);
-  transition:
-    color var(--transition-fast),
-    transform var(--transition-fast),
-    background var(--transition-fast);
-  z-index: 1;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-}
-
-.site-header.scrolled .nav-list a,
-#mainHeader.scrolled .nav-list a {
-  color: #ffffff;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-}
-
-.nav-list a::after {
-  content: "";
-  position: absolute;
-  bottom: 0.25rem;
-  left: 50%;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    var(--primary-400),
-    var(--creative-purple)
-  );
-  border-radius: 2px;
-  transform: translateX(-50%);
-  transition:
-    width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.35s ease;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.nav-list a:hover {
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-.nav-list a:hover::after {
-  width: calc(100% - 1.5rem);
-  opacity: 1;
-}
-
-.nav-list a.active {
-  color: #ffffff;
-}
-
-.nav-list a.active::after {
-  width: calc(100% - 1.5rem);
-  opacity: 1;
-  background: linear-gradient(90deg, var(--primary-400), var(--primary-300));
-}
-
-.nav-list a:hover {
-  text-shadow:
-    0 1px 4px rgba(0, 0, 0, 0.35),
-    0 0 12px rgba(74, 163, 255, 0.35);
-}
-
-.nav-list a.btn-primary {
-  color: #ffffff;
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    sans-serif;
-  font-weight: 600;
-  font-size: 0.875rem;
-  letter-spacing: 0.01em;
-  padding: 0.625rem 1.375rem;
-  text-shadow: none;
-  box-shadow: 0 6px 20px rgba(47, 123, 230, 0.35);
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  min-height: auto;
-}
-
-.nav-list a.btn-primary::after {
-  display: none;
-}
-
-.nav-list a.btn-primary:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 10px 28px rgba(47, 123, 230, 0.5);
-  color: #ffffff;
-  text-shadow: none;
-}
-
-@media (max-width: 1280px) {
-  .nav-list a {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.875rem;
-  }
-
-  .nav-list {
-    gap: 0.125rem;
-  }
-
-  .nav-list a.btn-primary {
-    font-size: 0.8125rem;
-    padding: 0.5rem 1.125rem;
-  }
-}
-
-@media (max-width: 1100px) {
-  .nav-list a {
-    font-size: 0.8125rem;
-    padding: 0.5rem 0.75rem;
-  }
-
-  .nav-list a.btn-primary {
-    font-size: 0.75rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
-/* ============================================= */
-/* MENU MOBILE — TOGGLE (X)                      */
-/* ============================================= */
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  z-index: 1002;
-  position: relative;
-  width: 40px;
-  height: 40px;
-  transition: all var(--transition-fast);
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-}
-
-.site-header.scrolled .nav-toggle,
-#mainHeader.scrolled .nav-toggle {
-  color: #ffffff;
-}
-
-.nav-toggle i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all var(--transition-fast);
-  z-index: 2;
-}
-
-.nav-toggle .fa-bars {
-  opacity: 1;
-  visibility: visible;
-}
-
-.nav-toggle .fa-times {
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-
-.nav-toggle[aria-expanded="true"] .fa-bars {
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, -50%) rotate(-90deg);
-}
-
-.nav-toggle[aria-expanded="true"] .fa-times {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, -50%) rotate(0deg);
-  color: #4aa3ff;
-  text-shadow:
-    0 0 12px rgba(74, 163, 255, 0.6),
-    0 2px 8px rgba(0, 0, 0, 0.8);
-}
-
-.nav-toggle:hover {
-  transform: scale(1.1);
-}
-
-.nav-toggle:active {
-  transform: scale(0.95);
-}
-
-/* ============================================= */
-/* HERO TITLE — ANIMAÇÃO (fill-words)            */
-/* ============================================= */
-
-.hero-title.fill-words {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.9rem;
-  line-height: 1.05 !important;
-}
-
-.hero-title.fill-words .line-1,
-.hero-title.fill-words .line-2 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.9rem;
-  width: 100%;
-}
-
-.hero-title.fill-words span {
-  display: inline-block;
-  position: relative;
-  color: transparent;
-  opacity: 0;
-  transform: translateY(24px);
-  animation: wordRiseFillGradient 0.85s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.hero-title.fill-words span:nth-child(1) {
-  animation-delay: 0.05s;
-}
-.hero-title.fill-words span:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.hero-title.fill-words span:nth-child(3) {
-  animation-delay: 0.25s;
-}
-.hero-title.fill-words span:nth-child(4) {
-  animation-delay: 0.35s;
-}
-.hero-title.fill-words span:nth-child(5) {
-  animation-delay: 0.45s;
-}
-
-.hero-title.fill-words .line-1 span,
-.hero-title.fill-words .line-2 span {
-  background: linear-gradient(135deg, #ffffff 0%, var(--primary-200) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.hero-title.fill-words .line-2 span {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    var(--primary-300) 55%,
-    var(--primary-500) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-@keyframes wordRiseFillGradient {
-  0% {
-    opacity: 0;
-    transform: translateY(24px);
-    -webkit-text-fill-color: transparent;
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-text-fill-color: initial;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-title.fill-words span {
-    animation: none;
-    opacity: 1;
-    transform: none;
-    color: #ffffff;
-    -webkit-text-fill-color: #ffffff;
-  }
-  .hero-title.fill-words .line-1 span,
-  .hero-title.fill-words .line-2 span {
-    -webkit-text-fill-color: initial;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-title.fill-words span {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title.fill-words span {
-    font-size: clamp(1.5rem, 7vw, 2rem);
-  }
-}
-
-/* ============================================= */
-/* HERO SECTION */
-/* ============================================= */
-
-.hero {
-  position: relative;
-  min-height: 102vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  margin-top: 0;
-  padding-top: var(--header-height);
-}
-
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
-  filter: brightness(0.7) contrast(1.08) saturate(1.05);
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(15, 23, 42, 0.75) 0%,
-    rgba(15, 23, 42, 0.35) 35%,
-    rgba(15, 23, 42, 0.5) 75%,
-    rgba(15, 23, 42, 0.85) 100%
-  );
-  z-index: 2;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  color: white;
-  max-width: 980px;
-  padding: 2rem;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 5vw, 4.25rem);
-  margin-bottom: 1.75rem;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-}
-
-.hero-subtitle {
-  font-size: clamp(1.1875rem, 2.5vw, 1.5rem);
-  margin-bottom: 3.25rem;
-  color: rgba(255, 255, 255, 0.95);
-  line-height: 1.65;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* ============================================= */
-/* BOTÕES PREMIUM */
-/* ============================================= */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 1.125rem 2.5rem;
-  border-radius: var(--radius-full);
-  font-weight: 600;
-  font-size: 1.0625rem;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition-bounce);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  min-height: 56px;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-  z-index: -1;
-}
-
-.btn:hover::before {
-  opacity: 1;
-}
-
-.btn-primary {
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  color: white;
-  box-shadow: 0 10px 40px rgba(47, 123, 230, 0.3);
-}
-
-.btn-primary:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 20px 60px rgba(47, 123, 230, 0.45);
-}
-
-.btn-outline {
-  background: rgba(255, 255, 255, 0.06);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
-}
-
-.btn-outline:hover {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.14);
-  transform: translateY(-3px);
-}
-
-.btn-group {
-  display: flex;
-  gap: 1.25rem;
-  justify-content: center;
-  margin-top: 3.25rem;
-  flex-wrap: wrap;
-}
-
-/* ============================================= */
-/* BOTÃO FLUTUANTE WHATSAPP */
-/* ============================================= */
-
-.whatsapp-float {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 64px;
-  height: 64px;
-  background: var(--whatsapp-green);
-  color: #ffffff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  text-decoration: none;
-  z-index: 9999;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
-  transition:
-    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-  padding: 0;
-  border: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(30px) scale(0.8);
-  pointer-events: none;
-}
-
-.whatsapp-float.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-  animation: whatsappPulse 2.5s ease-in-out infinite;
-}
-
-.whatsapp-float.visible:hover {
-  background: var(--whatsapp-green-dark);
-  transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 18px 45px rgba(37, 211, 102, 0.6);
-  animation: none;
-}
-
-.whatsapp-float:focus {
-  outline: 3px solid rgba(37, 211, 102, 0.5);
-  outline-offset: 4px;
-}
-
-.whatsapp-float i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-@keyframes whatsappPulse {
-  0%,
-  100% {
-    box-shadow:
-      0 10px 30px rgba(37, 211, 102, 0.45),
-      0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  50% {
-    box-shadow:
-      0 10px 30px rgba(37, 211, 102, 0.45),
-      0 0 0 14px rgba(37, 211, 102, 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .whatsapp-float.visible {
-    animation: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .whatsapp-float {
-    width: 56px;
-    height: 56px;
-    font-size: 1.75rem;
-    bottom: 20px;
-    right: 20px;
-  }
-}
-
-/* ============================================= */
-/* CLIENTES QUE CONFIAM */
-/* ============================================= */
-
-.clients-showcase {
-  background: white;
-}
-
-.client-feature {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-  gap: 0;
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-
-.client-feature-media {
-  position: relative;
-  min-height: 320px;
-}
-
-.client-feature-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.client-feature-body {
-  padding: clamp(1.75rem, 4vw, 3.25rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.client-feature-category {
-  color: var(--primary-500);
-  font-weight: 600;
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
-}
-
-.client-feature-body h3 {
-  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
-  color: var(--gray-900);
-  margin-bottom: 1rem;
-  line-height: 1.3;
-}
-
-.client-feature-body p {
-  color: var(--gray-700);
-  line-height: 1.7;
-  margin-bottom: 1.75rem;
-}
-
-.client-feature-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--gray-200);
-}
-
-.client-feature-stat dt {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--primary-500);
-  line-height: 1.1;
-  margin-bottom: 0.25rem;
-}
-
-.client-feature-stat dd {
-  font-size: 0.8125rem;
-  color: var(--gray-600);
-  margin: 0;
-}
-
-@media (max-width: 900px) {
-  .client-feature {
-    grid-template-columns: 1fr;
-  }
-
-  .client-feature-media {
-    min-height: 220px;
-  }
-}
-
-@media (max-width: 480px) {
-  .client-feature-stats {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-    text-align: center;
-  }
-}
-
-/* ============================================= */
-/* MARCAS QUE ATENDEMOS */
-/* ============================================= */
-
-.brands-marquee-section {
-  width: 100%;
-  background: var(--dark-bg);
-  padding: 3.5rem 0;
-  overflow: hidden;
-}
-
-.brands-marquee-inner {
-  width: 100%;
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-}
-
-.brands-marquee-label {
-  text-align: center;
-  color: var(--gray-400);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin: 0 0 2rem;
-}
-
-.brands-marquee-track-wrap {
-  position: relative;
-  overflow: hidden;
-}
-
-.brands-marquee-track-wrap::before,
-.brands-marquee-track-wrap::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 80px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.brands-marquee-track-wrap::before {
-  left: 0;
-  background: linear-gradient(to right, var(--dark-bg), transparent);
-}
-
-.brands-marquee-track-wrap::after {
-  right: 0;
-  background: linear-gradient(to left, var(--dark-bg), transparent);
-}
-
-.brands-marquee-track {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  width: max-content;
-  animation: brandsMarquee 35s linear infinite;
-}
-
-.brands-marquee-track .brand-logo {
-  height: 40px;
-  width: auto;
-  flex-shrink: 0;
-  filter: grayscale(1) brightness(0.85);
-  opacity: 0.75;
-  transition:
-    filter var(--transition-normal),
-    opacity var(--transition-normal);
-}
-
-.brands-marquee-track .brand-logo:hover {
-  filter: grayscale(0) brightness(1.1);
-  opacity: 1;
-}
-
-@keyframes brandsMarquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .brands-marquee-track {
-    animation: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .brands-marquee-section {
-    padding: 2.5rem 0;
-  }
-
-  .brands-marquee-track {
-    gap: 2.5rem;
-    animation-duration: 25s;
-  }
-
-  .brands-marquee-track .brand-logo {
-    height: 32px;
-  }
-
-  .brands-marquee-track-wrap::before,
-  .brands-marquee-track-wrap::after {
-    width: 40px;
-  }
-}
-
-/* ============================================= */
-/* QUEM SOMOS */
-/* ============================================= */
-
-.about-us-section {
-  background-color: #ffffff;
-}
-
-.about-us-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
-}
-
-.about-us-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-us-eyebrow {
-  color: var(--primary-500);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8125rem;
-  margin-bottom: 1rem;
-}
-
-.about-us-title {
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  font-weight: 800;
-  line-height: 1.15;
-  color: var(--gray-900);
-  margin-bottom: 1.5rem;
-}
-
-.about-us-text {
-  font-size: 1.0625rem;
-  color: var(--gray-600);
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
-}
-
-.about-us-pillars {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  border-top: 1px solid var(--gray-200);
-  padding-top: 2rem;
-}
-
-.about-us-pillar .about-us-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  color: white;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 15px rgba(47, 123, 230, 0.3);
-}
-
-.about-us-pillar h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--gray-900);
-  margin-bottom: 0.5rem;
-}
-
-.about-us-pillar p {
-  font-size: 0.9375rem;
-  color: var(--gray-600);
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.about-us-media {
-  position: relative;
-}
-
-.about-us-image-wrapper {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: visible;
-}
-
-.about-us-image-wrapper img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  object-fit: cover;
-  aspect-ratio: 4 / 3;
-}
-
-.about-us-quote-card {
-  position: absolute;
-  bottom: -40px;
-  left: -40px;
-  width: 65%;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: var(--radius-md);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
-  border: 1px solid var(--gray-100);
-  z-index: 2;
-}
-
-.quote-icon {
-  position: absolute;
-  top: -18px;
-  left: 2rem;
-  font-size: 2.5rem;
-  color: var(--primary-500);
-  line-height: 1;
-}
-
-.quote-text {
-  font-size: 0.9375rem;
-  font-style: italic;
-  color: var(--gray-700);
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
-}
-
-.quote-author {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--gray-900);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0;
-}
-
-@media (max-width: 992px) {
-  .about-us-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .about-us-media {
-    order: -1;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .about-us-quote-card {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    width: 90%;
-    margin: -60px auto 0;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 480px) {
-  .about-us-pillars {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .about-us-quote-card {
-    width: 100%;
-    padding: 1.5rem;
-  }
-
-  .quote-icon {
-    left: 1.5rem;
-    font-size: 2rem;
-  }
-}
-
-/* ============================================= */
-/* MÉTODO — ANIMADO */
-/* ============================================= */
-
-.method-section {
-  background: var(--gray-100);
-  position: relative;
-  overflow: hidden;
-}
-
-.method-header {
-  text-align: center;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
-}
-
-.method-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  color: var(--primary-500);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.75rem;
-  margin-bottom: 1.25rem;
-}
-
-.method-eyebrow-line {
-  display: inline-block;
-  width: 32px;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--primary-500),
-    transparent
-  );
-}
-
-.method-title {
-  font-size: clamp(2rem, 4.5vw, 3.25rem);
-  font-weight: 800;
-  color: var(--gray-900);
-  line-height: 1.1;
-  margin-bottom: 1.25rem;
-  position: relative;
-}
-
-.method-title-highlight {
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    120deg,
-    var(--primary-500),
-    var(--creative-cyan),
-    var(--primary-400)
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientShift 5s ease infinite;
-}
-
-@keyframes gradientShift {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.method-subtitle {
-  margin-bottom: 0 !important;
-  color: var(--gray-600) !important;
-}
-
-.method-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  position: relative;
-}
-
-.method-step {
-  position: relative;
-  background: #ffffff;
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-lg);
-  padding: 2.5rem 1.75rem 2rem;
-  text-align: left;
-  overflow: hidden;
-  transition:
-    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.4s ease,
-    border-color 0.4s ease;
-  z-index: 1;
-}
-
-.method-step::before {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border-radius: var(--radius-lg);
-  padding: 1px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple),
-    var(--primary-400)
-  );
-  background-size: 200% 200%;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  animation: gradientShift 4s ease infinite;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.method-step:hover::before {
-  opacity: 1;
-}
-
-.method-number {
-  position: absolute;
-  top: 1rem;
-  right: 1.25rem;
-  font-size: 4.5rem;
-  font-weight: 800;
-  font-family: "Poppins", sans-serif;
-  line-height: 1;
-  background: linear-gradient(
-    135deg,
-    var(--primary-100) 0%,
-    var(--primary-200) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.06em;
-  transition:
-    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-    opacity 0.4s ease;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.method-step:hover .method-number {
-  transform: scale(1.1) translateY(-4px);
-  background: linear-gradient(
-    135deg,
-    var(--primary-400) 0%,
-    var(--creative-purple) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.method-step-icon-bg {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  font-size: 7rem;
-  color: var(--primary-100);
-  opacity: 0;
-  transform: rotate(-15deg) scale(0.8);
-  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.method-step:hover .method-step-icon-bg {
-  opacity: 0.5;
-  transform: rotate(0deg) scale(1);
-}
-
-.method-step-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(
-    135deg,
-    rgba(47, 123, 230, 0.12),
-    rgba(139, 92, 246, 0.12)
-  );
-  color: var(--primary-500);
-  font-size: 1.375rem;
-  margin-bottom: 1.25rem;
-  transition:
-    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
-    background 0.4s ease,
-    color 0.4s ease,
-    box-shadow 0.4s ease;
-  position: relative;
-  z-index: 1;
-}
-
-.method-step:hover .method-step-icon {
-  transform: translateY(-4px) scale(1.08) rotate(-4deg);
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  color: #ffffff;
-  box-shadow: 0 12px 28px rgba(47, 123, 230, 0.4);
-}
-
-.method-step h3 {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--gray-900);
-  margin-bottom: 0.75rem;
-  line-height: 1.3;
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.method-step:hover h3 {
-  color: var(--primary-500);
-}
-
-.method-step p {
-  font-size: 0.9375rem;
-  color: var(--gray-600);
-  line-height: 1.65;
-  margin-bottom: 0;
-  position: relative;
-  z-index: 1;
-  transition: color 0.3s ease;
-}
-
-.method-step-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 3;
-}
-
-.method-step:hover .method-step-line {
-  width: 100%;
-}
-
-.method-step:hover {
-  transform: translateY(-10px);
-  box-shadow:
-    0 30px 60px rgba(15, 23, 42, 0.12),
-    0 0 0 1px rgba(47, 123, 230, 0.08);
-  border-color: transparent;
-}
-
-.method-grid .method-step:nth-child(1) {
-  transition-delay: 0.05s;
-}
-.method-grid .method-step:nth-child(2) {
-  transition-delay: 0.15s;
-}
-.method-grid .method-step:nth-child(3) {
-  transition-delay: 0.25s;
-}
-.method-grid .method-step:nth-child(4) {
-  transition-delay: 0.35s;
-}
-
-.method-cta-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-}
-
-.method-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  background: transparent;
-  color: var(--primary-500);
-  font-weight: 600;
-  font-size: 0.9375rem;
-  text-decoration: none;
-  border: 2px solid var(--primary-500);
-  border-radius: var(--radius-full);
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.method-cta::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: -1;
-  border-radius: var(--radius-full);
-}
-
-.method-cta:hover::before {
-  transform: scaleX(1);
-}
-
-.method-cta:hover {
-  color: #ffffff;
-  border-color: transparent;
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(47, 123, 230, 0.35);
-}
-
-.method-cta i {
-  font-size: 0.875rem;
-  transition: transform 0.3s ease;
-}
-
-.method-cta:hover i:last-child {
-  transform: translateX(4px);
-}
-
-.method-cta:hover i:first-child {
-  transform: scale(1.1);
-}
-
-@media (max-width: 1100px) {
-  .method-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .method-section {
-    padding: 4rem 0;
-  }
-
-  .method-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .method-step {
-    padding: 2rem 1.5rem 1.75rem;
-  }
-
-  .method-number {
-    font-size: 3.5rem;
-    top: 0.75rem;
-    right: 1rem;
-  }
-
-  .method-step-icon {
-    width: 46px;
-    height: 46px;
-    font-size: 1.25rem;
-  }
-
-  .method-step-icon-bg {
-    font-size: 5rem;
-  }
-
-  .method-step h3 {
-    font-size: 1.0625rem;
-  }
-
-  .method-step p {
-    font-size: 0.875rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .method-step,
-  .method-step::before,
-  .method-number,
-  .method-step-icon,
-  .method-step-icon-bg,
-  .method-step-line,
-  .method-cta,
-  .method-cta::before,
-  .method-title-highlight {
-    transition: none !important;
-    animation: none !important;
-  }
-
-  .method-step:hover {
-    transform: none;
-  }
-
-  .method-step:hover .method-step-icon {
-    transform: none;
-  }
-}
-
-/* ============================================= */
-/* EXPERTISES — CORRIGIDO E COMPLETO            */
-/* ============================================= */
-
-.expertises-section {
-  position: relative;
-  background: var(--dark-bg);
-  color: white;
-  padding: clamp(4.5rem, 8vw, 8rem) 0;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.expertises-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.expertises-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.28;
-  animation: expertiseOrbFloat 22s ease-in-out infinite;
-}
-
-.expertises-orb--1 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, var(--primary-500), transparent 70%);
-  top: -15%;
-  right: -10%;
-  animation-delay: 0s;
-}
-
-.expertises-orb--2 {
-  width: 340px;
-  height: 340px;
-  background: radial-gradient(circle, var(--creative-purple), transparent 70%);
-  bottom: -15%;
-  left: -10%;
-  animation-delay: -8s;
-}
-
-.expertises-orb--3 {
-  width: 260px;
-  height: 260px;
-  background: radial-gradient(circle, var(--creative-cyan), transparent 70%);
-  top: 50%;
-  left: 45%;
-  opacity: 0.15;
-  animation-delay: -14s;
-}
-
-@keyframes expertiseOrbFloat {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(-30px, 40px) scale(1.1);
-  }
-  66% {
-    transform: translate(25px, -30px) scale(0.95);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .expertises-orb {
-    animation: none;
-  }
-}
-
-.expertises-container {
-  position: relative;
-  z-index: 1;
-}
-
-.expertises-title {
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
-}
-
-.expertises-title h2 {
-  color: white;
-  margin-bottom: 1.25rem;
-}
-
-.expertises-eyebrow {
-  color: var(--primary-400) !important;
-  position: relative;
-  display: inline-block;
-}
-
-.expertises-eyebrow::before,
-.expertises-eyebrow::after {
-  content: "✦";
-  color: var(--primary-400);
-  font-size: 0.75rem;
-  margin: 0 0.5rem;
-  opacity: 0.7;
-}
-
-.expertises-subtitle {
-  color: var(--gray-400) !important;
-  margin-bottom: 0;
-}
-
-.expertises-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.75rem;
-}
-
-.expertise-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 2.75rem 2rem 2.25rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-lg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  overflow: hidden;
-  transition:
-    transform var(--transition-normal),
-    border-color var(--transition-normal),
-    background var(--transition-normal),
-    box-shadow var(--transition-normal);
-  height: 100%;
-}
-
-.expertise-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle at center,
-    rgba(47, 123, 230, 0.15) 0%,
-    transparent 50%
-  );
-  opacity: 0;
-  transition: opacity var(--transition-slow);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.expertise-card:hover::before {
-  opacity: 1;
-}
-
-.expertise-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(74, 163, 255, 0.35);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(74, 163, 255, 0.15) inset;
-}
-
-.expertise-number {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  font-size: 4rem;
-  font-weight: 800;
-  font-family: "Poppins", sans-serif;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.04);
-  letter-spacing: -0.05em;
-  transition:
-    color var(--transition-normal),
-    transform var(--transition-normal);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.expertise-card:hover .expertise-number {
-  color: rgba(74, 163, 255, 0.12);
-  transform: scale(1.05);
-}
-
-.expertise-icon {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  height: 64px;
-  margin-bottom: 1.5rem;
-  border-radius: var(--radius-md);
-  background: linear-gradient(
-    135deg,
-    rgba(47, 123, 230, 0.15),
-    rgba(139, 92, 246, 0.15)
-  );
-  border: 1px solid rgba(74, 163, 255, 0.2);
-  color: var(--primary-400);
-  font-size: 1.625rem;
-  transition:
-    transform var(--transition-bounce),
-    background var(--transition-normal),
-    color var(--transition-normal),
-    border-color var(--transition-normal),
-    box-shadow var(--transition-normal);
-  z-index: 1;
-}
-
-.expertise-card:hover .expertise-icon {
-  transform: translateY(-4px) scale(1.05);
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  color: white;
-  border-color: transparent;
-  box-shadow: 0 12px 30px rgba(47, 123, 230, 0.4);
-}
-
-.expertise-card h3 {
-  position: relative;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 0.875rem;
-  line-height: 1.3;
-  z-index: 1;
-}
-
-.expertise-card p {
-  position: relative;
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  color: var(--gray-400);
-  margin-bottom: 1.5rem;
-  z-index: 1;
-}
-
-.expertise-features {
-  position: relative;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.75rem 0;
-  flex-grow: 1;
-  z-index: 1;
-}
-
-.expertise-features li {
-  position: relative;
-  padding: 0.4rem 0 0.4rem 1.5rem;
-  font-size: 0.875rem;
-  color: var(--gray-300);
-  line-height: 1.5;
-  transition: color var(--transition-fast);
-}
-
-.expertise-features li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    var(--primary-400),
-    var(--creative-purple)
-  );
-  box-shadow: 0 0 8px rgba(74, 163, 255, 0.4);
-  transition: transform var(--transition-fast);
-}
-
-.expertise-card:hover .expertise-features li {
-  color: var(--gray-200);
-}
-
-.expertise-card:hover .expertise-features li::before {
-  transform: translateY(-50%) scale(1.2);
-}
-
-.expertise-cta {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--primary-400);
-  text-decoration: none;
-  transition:
-    gap var(--transition-fast),
-    color var(--transition-fast);
-  z-index: 1;
-  margin-top: auto;
-}
-
-.expertise-cta i {
-  font-size: 0.75rem;
-  transition: transform var(--transition-fast);
-}
-
-.expertise-cta:hover {
-  gap: 0.75rem;
-  color: var(--primary-300);
-}
-
-.expertise-cta:hover i {
-  transform: translateX(3px);
-}
-
-.expertises-grid .expertise-card:nth-child(1) {
-  transition-delay: 0.05s;
-}
-.expertises-grid .expertise-card:nth-child(2) {
-  transition-delay: 0.15s;
-}
-.expertises-grid .expertise-card:nth-child(3) {
-  transition-delay: 0.25s;
-}
-.expertises-grid .expertise-card:nth-child(4) {
-  transition-delay: 0.35s;
-}
-
-@media (max-width: 1100px) {
-  .expertises-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .expertises-section {
-    padding: 4rem 0;
-  }
-
-  .expertises-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .expertise-card {
-    padding: 2.25rem 1.75rem 2rem;
-  }
-
-  .expertise-number {
-    font-size: 3.25rem;
-  }
-
-  .expertise-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 1.375rem;
-  }
-
-  .expertise-card h3 {
-    font-size: 1.125rem;
-  }
-
-  .expertises-orb--1,
-  .expertises-orb--2 {
-    width: 240px;
-    height: 240px;
-  }
-
-  .expertises-orb--3 {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* ============================================= */
-/* CASES — HOME */
-/* ============================================= */
-
-.cases-home-section {
-  position: relative;
-  background: var(--dark-bg);
-  color: #ffffff;
-  padding: clamp(4.5rem, 9vw, 8rem) 0;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.cases-home-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.cases-home-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(110px);
-  opacity: 0.18;
-  animation: casesHomeOrbFloat 22s ease-in-out infinite;
-}
-
-.cases-home-orb--1 {
-  width: 460px;
-  height: 460px;
-  background: radial-gradient(circle, var(--primary-500), transparent 70%);
-  top: -20%;
-  right: -10%;
-  animation-delay: 0s;
-}
-
-.cases-home-orb--2 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, var(--creative-purple), transparent 70%);
-  bottom: -25%;
-  left: -10%;
-  animation-delay: -11s;
-}
-
-@keyframes casesHomeOrbFloat {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(-40px, 30px) scale(1.08);
-  }
-  66% {
-    transform: translate(30px, -40px) scale(0.95);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cases-home-orb {
-    animation: none;
-  }
-}
-
-.cases-home-container {
-  position: relative;
-  z-index: 1;
-}
-
-.cases-home-header {
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
-}
-
-.cases-home-eyebrow {
-  display: inline-block;
-  color: var(--primary-400);
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.cases-home-eyebrow::before {
-  content: "✦";
-  color: var(--primary-400);
-  margin-right: 0.5rem;
-  font-size: 0.7rem;
-  opacity: 0.8;
-}
-
-.cases-home-title {
-  color: #ffffff;
-  font-size: clamp(2rem, 5.5vw, 4rem);
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-  margin: 0;
-  max-width: 22ch;
-}
-
-.cases-home-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.75rem;
-  margin-bottom: clamp(3rem, 6vw, 4.5rem);
-}
-
-.case-home-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: transparent;
-  border-radius: 0;
-  overflow: hidden;
-  cursor: pointer;
-  outline: none;
-  transition: transform var(--transition-normal);
-}
-
-.case-home-card:hover,
-.case-home-card:focus-visible {
-  transform: translateY(-4px);
-}
-
-.case-home-card:focus-visible {
-  outline: 3px solid var(--primary-400);
-  outline-offset: 4px;
-  border-radius: 6px;
-}
-
-.case-home-media {
-  position: relative;
-  aspect-ratio: 16 / 6.4;
-  overflow: hidden;
-  background: var(--gray-900);
-  margin-bottom: 1.75rem;
-  border-radius: 4px;
-}
-
-.case-home-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition:
-    transform 1s cubic-bezier(0.4, 0, 0.2, 1),
-    filter 0.4s ease;
-  filter: brightness(0.9) saturate(1.02);
-}
-
-.case-home-card:hover .case-home-media img,
-.case-home-card:focus-visible .case-home-media img {
-  transform: scale(1.05);
-  filter: brightness(1) saturate(1.05);
-}
-
-.case-home-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 0;
-}
-
-.case-home-client {
-  color: var(--primary-400);
-  font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.case-home-card-title {
-  color: #ffffff;
-  font-size: clamp(1.375rem, 2.4vw, 1.875rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.015em;
-  margin: 0;
-  transition: color var(--transition-fast);
-}
-
-.case-home-card:hover .case-home-card-title,
-.case-home-card:focus-visible .case-home-card-title {
-  color: var(--primary-300);
-}
-
-.case-home-desc {
-  color: var(--gray-400);
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  margin: 0;
-  max-width: 52ch;
-}
-
-.case-home-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--primary-400);
-  font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-top: 1rem;
-  transition:
-    gap var(--transition-fast),
-    color var(--transition-fast);
-}
-
-.case-home-cta i {
-  font-size: 0.75rem;
-  transition: transform var(--transition-fast);
-}
-
-.case-home-card:hover .case-home-cta,
-.case-home-card:focus-visible .case-home-cta {
-  gap: 0.75rem;
-  color: var(--primary-300);
-}
-
-.case-home-card:hover .case-home-cta i,
-.case-home-card:focus-visible .case-home-cta i {
-  transform: translateX(3px);
-}
-
-.cases-home-cta-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.cases-home-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 1.125rem 2.25rem;
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  color: #ffffff;
-  font-family: inherit;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition:
-    transform var(--transition-bounce),
-    box-shadow var(--transition-normal),
-    filter var(--transition-fast);
-  box-shadow: 0 10px 30px rgba(47, 123, 230, 0.35);
-  position: relative;
-  overflow: hidden;
-}
-
-.cases-home-cta-btn::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    var(--primary-400),
-    var(--creative-magenta)
-  );
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-  z-index: 0;
-}
-
-.cases-home-cta-btn:hover::before {
-  opacity: 1;
-}
-
-.cases-home-cta-btn > * {
-  position: relative;
-  z-index: 1;
-}
-
-.cases-home-cta-btn i {
-  font-size: 0.75rem;
-  transition: transform var(--transition-fast);
-}
-
-.cases-home-cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 45px rgba(47, 123, 230, 0.5);
-}
-
-.cases-home-cta-btn:hover i {
-  transform: translateX(4px);
-}
-
-.cases-home-cta-btn:focus-visible {
-  outline: 3px solid rgba(74, 163, 255, 0.6);
-  outline-offset: 4px;
-}
-
-.cases-home-grid .reveal:nth-child(1) {
-  transition-delay: 0.05s;
-}
-.cases-home-grid .reveal:nth-child(2) {
-  transition-delay: 0.15s;
-}
-.cases-home-grid .reveal:nth-child(3) {
-  transition-delay: 0.25s;
-}
-.cases-home-grid .reveal:nth-child(4) {
-  transition-delay: 0.35s;
-}
-
-@media (max-width: 900px) {
-  .cases-home-title {
-    max-width: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .cases-home-section {
-    padding: 4rem 0;
-  }
-
-  .cases-home-grid {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
-  }
-
-  .case-home-media {
-    aspect-ratio: 16 / 9;
-    margin-bottom: 1.5rem;
-  }
-
-  .case-home-card-title {
-    font-size: 1.5rem;
-  }
-
-  .cases-home-cta-btn {
-    width: 100%;
-    padding: 1.125rem 1.5rem;
-    font-size: 0.6875rem;
-  }
-
-  .cases-home-orb--1,
-  .cases-home-orb--2 {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .case-home-media {
-    aspect-ratio: 4 / 3;
-  }
-
-  .case-home-desc {
-    font-size: 0.875rem;
-  }
-}
-
-/* ============================================= */
-/* SOBRE A PLURAL */
-/* ============================================= */
-
-.brand-about-section {
-  background: var(--dark-bg);
-  color: white;
-  padding: clamp(4.5rem, 8vw, 7rem) 0;
-}
-
-.brand-about-grid {
-  display: grid;
-  grid-template-columns: 1.2fr auto 1fr;
-  gap: clamp(2rem, 4vw, 4rem);
-  align-items: start;
-}
-
-.brand-about-eyebrow,
-.learnings-eyebrow {
-  color: var(--primary-400);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.8125rem;
-  margin-bottom: 1.25rem;
-}
-
-.brand-about-title {
-  font-size: clamp(1.875rem, 3.2vw, 2.5rem);
-  color: white;
-  margin-bottom: 1.5rem;
-}
-
-.brand-about-text {
-  color: var(--gray-400);
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 0;
-  max-width: 46ch;
-}
-
-.brand-about-divider {
-  width: 1px;
-  height: 100%;
-  min-height: 220px;
-  background: var(--gray-700);
-  justify-self: center;
-}
-
-.brand-about-side {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-about-quote {
-  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
-  font-style: italic;
-  font-weight: 500;
-  line-height: 1.6;
-  color: var(--primary-200);
-  margin-bottom: 1.5rem;
-}
-
-.brand-about-author {
-  color: var(--gray-500);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 2rem;
-}
-
-.brand-about-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.625rem;
-}
-
-.brand-about-tags span {
-  background: var(--gray-700);
-  border: 1px solid var(--gray-600);
-  color: var(--gray-300);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.5rem 0.875rem;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
-}
-
-@media (max-width: 900px) {
-  .brand-about-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .brand-about-divider {
-    width: 100%;
-    height: 1px;
-    min-height: 0;
-    margin: 0.5rem 0;
-  }
-
-  .brand-about-text {
-    max-width: none;
-  }
-}
-
-/* ============================================= */
-/* O QUE APRENDEMOS */
-/* ============================================= */
-
-.learnings-section {
-  background: var(--dark-bg);
-  color: white;
-  padding: clamp(4.5rem, 8vw, 7rem) 0;
-}
-
-.learnings-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  gap: clamp(2rem, 4vw, 4rem);
-  align-items: start;
-}
-
-.learnings-title {
-  font-size: clamp(1.875rem, 3.2vw, 2.5rem);
-  color: white;
-  margin-bottom: 1.5rem;
-}
-
-.learnings-text {
-  color: var(--gray-400);
-  font-size: 1rem;
-  line-height: 1.75;
-  margin-bottom: 0;
-  max-width: 40ch;
-}
-
-.learnings-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.learnings-card {
-  position: relative;
-  background: var(--gray-900);
-  border: 1px solid var(--gray-700);
-  border-radius: var(--radius-lg);
-  padding: 2rem 1.75rem;
-  display: flex;
-  flex-direction: column;
-  transition:
-    transform var(--transition-normal),
-    border-color var(--transition-normal);
-}
-
-.learnings-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--primary-400);
-}
-
-.learnings-card--featured {
-  background: linear-gradient(
-    160deg,
-    var(--primary-500) 0%,
-    var(--gray-900) 65%
-  );
-  border-color: var(--primary-400);
-}
-
-.learnings-number {
-  display: block;
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--gray-700);
-  line-height: 1;
-  margin-bottom: 1.25rem;
-}
-
-.learnings-card--featured .learnings-number {
-  color: rgba(255, 255, 255, 0.35);
-}
-
-.learnings-card h3 {
-  font-size: 1.0625rem;
-  color: white;
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-}
-
-.learnings-card p {
-  font-size: 0.875rem;
-  color: var(--gray-400);
-  line-height: 1.65;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-
-.learnings-card--featured p {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.learnings-cta {
-  margin-top: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--primary-400);
-  font-weight: 600;
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  transition: gap var(--transition-fast);
-}
-
-.learnings-cta i {
-  font-size: 0.75rem;
-  transition: transform var(--transition-fast);
-}
-
-.learnings-cta:hover {
-  gap: 0.75rem;
-}
-
-.learnings-cta:hover i {
-  transform: translateX(3px);
-}
-
-@media (max-width: 900px) {
-  .learnings-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .learnings-text {
-    max-width: none;
-  }
-
-  .learnings-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ============================================= */
-/* TEAM GRID */
-/* ============================================= */
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2.25rem;
-}
-
-.team-member {
-  background: white;
-  border-radius: var(--radius-lg);
-  padding: 0 0 2rem;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition:
-    transform var(--transition-normal),
-    box-shadow var(--transition-normal),
-    border-color var(--transition-normal);
-  border: 1px solid var(--gray-200);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.team-member:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-200);
-}
-
-.member-photo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 0;
-  margin: 0 0 1.5rem;
-  overflow: hidden;
-}
-
-.member-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-
-.team-member:hover .member-photo img {
-  transform: scale(1.1);
-}
-
-.member-info h4 {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-  color: var(--gray-900);
-}
-
-.team-member h3 {
-  font-size: 1.375rem;
-  margin-bottom: 0.5rem;
-  color: var(--gray-900);
-  padding: 0 1.75rem;
-}
-
-.team-member .muted {
-  font-size: 1.0625rem;
-  color: var(--primary-500);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  padding: 0 1.75rem;
-}
-
-.team-member p {
-  font-size: 1rem;
-  color: var(--gray-600);
-  line-height: 1.65;
-  padding: 0 1.75rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  margin-top: 1.25rem;
-  padding: 0 1.75rem;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--gray-100);
-  color: var(--gray-600);
-  transition: all var(--transition-normal);
-  text-decoration: none;
-}
-
-.social-links a:hover {
-  background: var(--primary-500);
-  color: white;
-  transform: translateY(-3px);
-}
-
-/* ============================================= */
-/* CONTACT FORM */
-/* ============================================= */
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 420px;
-  gap: 3.5rem;
-  align-items: stretch;
-}
-
-.contact-form {
-  background: white;
-  padding: 3.25rem;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 1.75rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.625rem;
-  font-weight: 600;
-  font-size: 1.0625rem;
-  color: var(--gray-700);
-}
-
-.form-control {
-  width: 100%;
-  padding: 1.125rem 1.25rem;
-  border: 2px solid var(--gray-200);
-  border-radius: var(--radius-md);
-  font-family: inherit;
-  font-size: 1.0625rem;
-  line-height: 1.5;
-  transition: all var(--transition-fast);
-  background: white;
-  color: var(--gray-900);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  min-height: 56px;
-}
-
-.form-control:-webkit-autofill,
-.form-control:-webkit-autofill:hover,
-.form-control:-webkit-autofill:focus {
-  -webkit-text-fill-color: var(--gray-900);
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-.form-control:focus {
-  outline: none;
-  border-color: var(--primary-500);
-  box-shadow: 0 0 0 4px rgba(47, 123, 230, 0.12);
-}
-
-.form-control::placeholder {
-  color: var(--gray-400);
-}
-
-textarea.form-control {
-  min-height: 170px;
-  resize: vertical;
-  line-height: 1.65;
-}
-
-select.form-control {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1.25rem center;
-  background-size: 16px;
-  padding-right: 3.5rem;
-}
-
-.contact-form .btn {
-  padding: 1.25rem 2.5rem;
-  font-size: 1.0625rem;
-  min-height: 60px;
-  margin-top: 0.5rem;
-}
-
-/* ============================================= */
-/* CONTACT INFO */
-/* ============================================= */
-
-.contact-info {
-  background: linear-gradient(
-    160deg,
-    #ffffff 0%,
-    var(--gray-50) 60%,
-    var(--primary-100) 100%
-  );
-  padding: 3rem;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(47, 123, 230, 0.08);
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  height: 100%;
-}
-
-.contact-info .info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-}
-
-.contact-info .info-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background: linear-gradient(
-    135deg,
-    var(--primary-500),
-    var(--creative-purple)
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.375rem;
-  flex-shrink: 0;
-  box-shadow: 0 6px 16px rgba(47, 123, 230, 0.25);
-  transition: transform var(--transition-bounce);
-}
-
-.contact-info .info-item:hover .info-icon {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 24px rgba(47, 123, 230, 0.35);
-}
-
-.contact-info .info-item h3 {
-  font-size: 1.1875rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--gray-900);
-  line-height: 1.3;
-}
-
-.contact-info .info-item p {
-  font-size: 1.0625rem;
-  color: var(--gray-700);
-  line-height: 1.7;
-  margin-bottom: 0;
-}
-
-.contact-info .info-item a {
-  color: var(--primary-500);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color var(--transition-fast);
-}
-
-.contact-info .info-item a:hover {
-  color: var(--primary-600);
-}
-
-.contact-info .social-links-large {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(47, 123, 230, 0.15);
-  justify-content: center;
-  position: relative;
-}
-
-.contact-info .social-links-large::before {
-  content: "Siga-nos nas redes";
-  position: absolute;
-  top: -0.75rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(160deg, #ffffff 0%, var(--gray-50) 100%);
-  padding: 0 0.75rem;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--gray-500);
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.contact-info .social-links-large a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
-  background: var(--gray-100);
-  color: var(--gray-700);
-  text-decoration: none;
-  font-size: 1.25rem;
-  transition: all var(--transition-bounce);
-  border: 1px solid transparent;
-}
-
-.contact-info .social-links-large a:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(
-    135deg,
-    var(--creative-purple),
-    var(--primary-500)
-  );
-  color: white;
-  box-shadow: 0 8px 20px rgba(47, 123, 230, 0.25);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.contact-cta {
-  background: none;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 1.5rem 0 0 0;
-  margin-top: 1.5rem;
-  border-top: 1px solid rgba(47, 123, 230, 0.15);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.contact-cta-title {
-  font-family: "Outfit", "Poppins", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--gray-900);
-  margin: 0;
-  line-height: 1.3;
-  padding: 0;
-  position: static;
-}
-
-.contact-cta-title::after {
-  display: none;
-}
-
-.contact-cta-text {
-  font-size: 0.9375rem;
-  color: var(--gray-600);
-  line-height: 1.6;
-  margin: 0 0 0.75rem 0;
-  max-width: 300px;
-}
-
-.contact-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem !important;
-  font-size: 0.9375rem !important;
-  min-height: auto !important;
-  width: auto;
-  margin-top: 0;
-}
-
-.contact-cta-btn i {
-  font-size: 1rem;
-}
-
-.contact-cta-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-}
-
-/* ============================================= */
-/* FOOTER */
-/* ============================================= */
-
-.site-footer {
-  background: var(--dark-bg-alt);
-  color: white;
-  padding: 2rem 0 1.25rem;
-  margin-top: 3rem;
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    sans-serif;
-}
-
-.footer-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.875rem;
-  text-align: center;
-}
-
-.footer-line--top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-}
-
-.footer-copy {
-  color: var(--gray-500);
-  font-size: 0.75rem;
-  font-weight: 400;
-  margin: 0;
-  line-height: 1.5;
-  letter-spacing: 0.01em;
-}
-
-.footer-sep {
-  margin: 0 0.4rem;
-  color: var(--gray-600);
-  font-size: 0.75rem;
-}
-
-.footer-link-inline {
-  color: var(--gray-500);
-  text-decoration: none;
-  font-size: 0.75rem;
-  transition: color var(--transition-fast);
-}
-
-.footer-link-inline:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-.footer-line--social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.footer-social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--gray-500);
-  text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  transition:
-    color var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.footer-social-link i {
-  font-size: 0.9375rem;
-  color: var(--gray-600);
-  transition: color var(--transition-fast);
-}
-
-.footer-social-link:hover {
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
-.footer-social-link:hover i {
-  color: var(--primary-400);
-}
-
-.footer-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.06);
-  margin: 1.25rem 0 1rem;
-}
-
-.footer-bottom {
-  text-align: center;
-}
-
-.footer-credit {
-  color: var(--gray-600);
-  font-size: 0.6875rem;
-  margin: 0;
-  letter-spacing: 0.01em;
-}
-
-.footer-credit a {
-  color: var(--gray-500);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.footer-credit a:hover {
-  color: var(--primary-400);
-}
-
-@media (max-width: 768px) {
-  .site-footer {
-    padding: 1.75rem 0 1rem;
-    margin-top: 2rem;
-  }
-
-  .footer-line--social {
-    gap: 1rem;
-  }
-
-  .footer-social-link {
-    font-size: 0.6875rem;
-  }
-
-  .footer-social-link span {
-    display: none;
-  }
-
-  .footer-social-link i {
-    font-size: 1.25rem;
-  }
-
-  .footer-copy {
-    font-size: 0.6875rem;
-  }
-
-  .footer-credit {
-    font-size: 0.625rem;
-  }
-
-  .footer-divider {
-    margin: 1rem 0 0.875rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-line--social {
-    gap: 1.25rem;
-  }
-
-  .footer-social-link i {
-    font-size: 1.125rem;
-  }
-}
-
-/* ============================================= */
-/* MODAL PREMIUM */
-/* ============================================= */
-
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(15, 23, 42, 0.95);
-  pointer-events: auto;
-}
-
-.modal[aria-hidden="false"] {
-  display: flex;
-  animation: modalFadeIn 0.3s ease forwards;
-}
-
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    backdrop-filter: blur(0);
-  }
-  to {
-    opacity: 1;
-    backdrop-filter: blur(20px);
-  }
-}
-
-.modal-content {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  background: black;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-xl);
-  animation: modalSlideIn 0.3s ease forwards;
-  z-index: 2;
-  pointer-events: auto;
-}
-
-@keyframes modalSlideIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-.modal-backdrop {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: transparent;
-  cursor: pointer;
-  pointer-events: auto;
-}
-
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 100;
-  transition: all var(--transition-fast);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(10px);
-  pointer-events: auto;
-}
-
-.modal-close:hover {
-  background: rgba(255, 255, 255, 0.35);
-  transform: rotate(90deg) scale(1.1);
-}
-
-.modal-close:focus {
-  outline: 3px solid rgba(47, 123, 230, 0.6);
-  outline-offset: 3px;
-}
-
-.modal-video {
-  position: relative;
-  z-index: 3;
-  pointer-events: auto;
-}
-
-.modal-video video {
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
-  display: block;
-  background: #000;
-  pointer-events: auto;
-}
-
-body.modal-open {
-  overflow: hidden !important;
-}
-
-body.modal-open .site-header,
-body.modal-open #mainHeader {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-body.modal-open main > section,
-body.modal-open main > .hero,
-body.modal-open main > .clients-showcase {
-  z-index: -1 !important;
-  pointer-events: none !important;
-}
-
-body.modal-open .modal {
-  pointer-events: auto !important;
-  z-index: 99999 !important;
-}
-
-body.modal-open .modal,
-body.modal-open .modal * {
-  pointer-events: auto !important;
-}
-
-/* ============================================= */
-/* UTILITIES */
-/* ============================================= */
-
-.scroll-indicator {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  z-index: 3;
-  text-decoration: none;
-  opacity: 0.85;
-  transition: opacity var(--transition-fast);
-}
-
-.scroll-indicator i {
-  display: none;
-}
-
-.scroll-indicator::before {
-  content: "Descubra mais";
-}
-
-.scroll-indicator::after {
-  content: "";
-  width: 1px;
-  height: 42px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
-  animation: scrollLine 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-.scroll-indicator:hover {
-  opacity: 1;
-}
-
-@keyframes scrollLine {
-  0% {
-    transform: scaleY(0);
-    transform-origin: top;
-    opacity: 0.4;
-  }
-  50% {
-    transform: scaleY(1);
-    transform-origin: top;
-    opacity: 1;
-  }
-  50.01% {
-    transform-origin: bottom;
-  }
-  100% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-    opacity: 0.4;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .scroll-indicator::after {
-    animation: none;
-    opacity: 0.6;
-  }
-}
-
-.error-message {
-  color: #ef4444;
-  font-size: 0.9375rem;
-  margin-top: 0.375rem;
-  display: block;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideOut {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-}
-
-.skeleton {
-  background: linear-gradient(
-    90deg,
-    var(--gray-200) 25%,
-    var(--gray-100) 50%,
-    var(--gray-200) 75%
-  );
-  background-size: 200% 100%;
-  animation: loading 1.5s ease-in-out infinite;
-  border-radius: var(--radius-md);
-}
-
-@keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-#quem-somos,
-#metodo,
-#clientes,
-#expertises,
-#portfolio,
-#cases,
-#sobre-plural,
-#aprendemos,
-#sobre,
-#contato {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-main {
-  position: relative;
-  z-index: 1;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#portfolio,
-#servicos,
-#artes,
-#equipe,
-#contato,
-section[id] {
-  scroll-margin-top: var(--header-height);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-header,
-  #mainHeader {
-    transition: none !important;
-  }
-}
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Produção audiovisual, vídeos institucionais, motion graphics, design gráfico, estratégia de conteúdo" />
+    <meta name="keywords" content="produção audiovisual, vídeos institucionais, motion graphics, design gráfico, estratégia de conteúdo" />
+    <meta property="og:title" content="Plural Criativo - Criamos experiências visuais que emocionam" />
+    <meta property="og:description" content="Transformamos ideias em experiências visuais impactantes." />
+    <meta property="og:image" content="assets/img/og-image.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#2f7be6" />
+    <title>Plural Criativo - Criamos experiências visuais que emocionam</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 </head>
-<body>
 
-    <!-- ============================================= -->
-    <!-- HEADER                                        -->
-    <!-- ============================================= -->
+<body>
     <header class="site-header" id="mainHeader">
       <div class="container">
         <div class="header-inner">
-          <a href="#top" class="brand">
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 50'%3E%3Ctext x='0' y='35' font-family='Poppins, sans-serif' font-weight='800' font-size='28' fill='%23ffffff'%3Eplural%3C/text%3E%3Ccircle cx='132' cy='25' r='8' fill='%232f7be6'/%3E%3C/svg%3E"
-              alt="Plural Criativo"
-              class="brand-logo"
-              width="200"
-              height="50"
-            />
+          <a href="index.html" class="brand">
+            <img src="assets/img/logoplu.png" alt="Plural Criativo" class="brand-logo" width="200" height="50" />
           </a>
 
           <nav class="main-nav" aria-label="Navegação principal">
-            <button
-              id="navToggleSticky"
-              class="nav-toggle"
-              aria-expanded="false"
-              aria-label="Abrir/fechar menu"
-            >
+            <button id="navToggleSticky" class="nav-toggle" aria-expanded="false" aria-label="Abrir/fechar menu">
               <i class="fas fa-bars" aria-hidden="true"></i>
               <i class="fas fa-times" aria-hidden="true"></i>
             </button>
@@ -3552,9 +43,7 @@ section[id] {
               <li><a href="#cases">Cases</a></li>
               <li><a href="#sobre-plural">Sobre</a></li>
               <li><a href="#aprendemos">Aprendizados</a></li>
-              <li>
-                <a href="#contato" class="btn btn-primary btn-sm">Contato</a>
-              </li>
+              <li><a href="#contato" class="btn btn-primary btn-sm">Contato</a></li>
             </ul>
           </nav>
         </div>
@@ -3562,714 +51,534 @@ section[id] {
     </header>
 
     <main id="main" class="site-main">
-      <!-- ========================================== -->
-      <!-- HERO SECTION                                -->
-      <!-- ========================================== -->
-      <section class="hero" id="top" aria-label="Hero section">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="metadata"
-          poster="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1920&q=80"
-          class="hero-video"
-          onerror="this.style.display='none';"
-        >
-          <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-overlay"></div>
+        <!-- Hero Section -->
+        <section class="hero" id="top" aria-label="Hero section">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg" class="hero-video" onerror="this.style.display='none';">
+            <source src="assets/videos/video-hero.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-overlay"></div>
 
-        <div class="hero-content">
-          <h1 class="hero-title fill-words">
-            <div class="line-1">
-              <span data-text="Criamos">Criamos</span>
-              <span data-text="experiências">experiências</span>
-            </div>
-            <div class="line-2">
-              <span data-text="visuais">visuais</span>
-              <span data-text="que">que</span>
-              <span data-text="emocionam">emocionam</span>
-            </div>
-          </h1>
-          <p class="hero-subtitle">Conectando pessoas às suas histórias</p>
+          <div class="hero-content">
+            <h1 class="hero-title fill-words">
+              <div class="line-1">
+                <span data-text="Criamos">Criamos</span>
+                <span data-text="experiências">experiências</span>
+              </div>
+              <div class="line-2">
+                <span data-text="visuais">visuais</span>
+                <span data-text="que">que</span>
+                <span data-text="emocionam">emocionam</span>
+              </div>
+            </h1>
+            <p class="hero-subtitle">Conectando pessoas às suas histórias</p>
 
-          <div class="btn-group">
-            <a href="#cases" class="btn btn-primary">
-              <i class="fas fa-play-circle"></i>
-              Ver Portfólio
-            </a>
-            <a href="#contato" class="btn btn-outline">
-              <i class="fas fa-comment"></i>
-              Fale Conosco
-            </a>
+            <div class="btn-group">
+              <a href="portfolio.html" class="btn btn-primary">
+                <i class="fas fa-play-circle"></i>
+                Ver Portfólio
+              </a>
+              <a href="#contato" class="btn btn-outline">
+                <i class="fas fa-comment"></i>
+                Fale Conosco
+              </a>
+            </div>
           </div>
-        </div>
 
-        <a href="#quem-somos" class="scroll-indicator" aria-label="Scroll para mais conteúdo">
-          <i class="fas fa-chevron-down"></i>
-        </a>
-      </section>
+          <a href="#quem-somos" class="scroll-indicator" aria-label="Scroll para mais conteúdo">
+            <i class="fas fa-chevron-down"></i>
+          </a>
+        </section>
 
-      <!-- ========================================== -->
-      <!-- QUEM SOMOS                                  -->
-      <!-- ========================================== -->
-      <section id="quem-somos" class="about-us-section section" aria-label="Quem Somos - Plural Criativo">
-        <div class="container">
-          <div class="about-us-grid">
-            <div class="about-us-content reveal">
-              <p class="about-us-eyebrow">QUEM SOMOS</p>
-              <h2 class="about-us-title">
-                Transformamos ideias em experiências visuais que conectam e emocionam.
-              </h2>
-              <p class="about-us-text">
-                Na Plural Criativo, acreditamos que toda marca tem uma história única para contar. Unimos técnica, sensibilidade estética e estratégia para criar vídeos, animações e designs que não apenas comunicam, mas geram conexão real com o público.
+        <!-- Quem Somos -->
+        <section id="quem-somos" class="about-us-section section" aria-label="Quem Somos - Plural Criativo">
+          <div class="container">
+            <div class="about-us-grid">
+              <div class="about-us-content reveal">
+                <p class="about-us-eyebrow">QUEM SOMOS</p>
+                <h2 class="about-us-title">
+                  Transformamos ideias em experiências visuais que conectam e emocionam.
+                </h2>
+                <p class="about-us-text">
+                  Na Plural Criativo, acreditamos que toda marca tem uma história única para contar. Unimos técnica, sensibilidade estética e estratégia para criar vídeos, animações e designs que não apenas comunicam, mas geram conexão real com o público.
+                </p>
+
+                <div class="about-us-pillars">
+                  <div class="about-us-pillar">
+                    <div class="about-us-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Visão</h3>
+                    <p>Ser a referência em produção audiovisual criativa no Norte e Nordeste, elevando o padrão da comunicação visual no mercado.</p>
+                  </div>
+                  <div class="about-us-pillar">
+                    <div class="about-us-icon"><i class="fas fa-clapperboard"></i></div>
+                    <h3>Missão</h3>
+                    <p>Transformar conceitos em conteúdo visual impactante, unindo propósito, técnica e sensibilidade estética em cada entrega.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-us-media reveal">
+                <div class="about-us-image-wrapper">
+                  <img src="https://placehold.co/600x400/1e293b/f8fafc?text=Imagem+Quem+Somos" alt="Equipe Plural Criativo em produção audiovisual" loading="lazy" />
+                  <div class="about-us-quote-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p class="quote-text">
+                      Se você ou sua organização têm uma história para contar, uma ideia para compartilhar ou uma mensagem para divulgar, podemos ajudá-los a dar vida a ela.
+                    </p>
+                    <p class="quote-author">Equipe Plural Criativo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Método -->
+        <section id="metodo" class="method-section section alt" aria-label="Nosso método de trabalho">
+          <div class="container">
+            <div class="section-title method-header reveal">
+              <p class="method-eyebrow">
+                <span class="method-eyebrow-line"></span>
+                NOSSO MÉTODO
+                <span class="method-eyebrow-line"></span>
               </p>
+              <h2 class="method-title">Como <span class="method-title-highlight">Trabalhamos</span></h2>
+              <p class="section-subtitle method-subtitle">Um processo claro, do briefing à entrega final — com propósito em cada etapa.</p>
+            </div>
 
-              <div class="about-us-pillars">
-                <div class="about-us-pillar">
-                  <div class="about-us-icon">
-                    <i class="fas fa-eye"></i>
-                  </div>
-                  <h3>Visão</h3>
-                  <p>Ser a referência em produção audiovisual criativa no Norte e Nordeste, elevando o padrão da comunicação visual no mercado.</p>
+            <div class="method-grid">
+              <article class="method-step reveal" data-step="01">
+                <div class="method-step-icon-bg" aria-hidden="true"><i class="fas fa-search"></i></div>
+                <span class="method-number" aria-hidden="true">01</span>
+                <div class="method-step-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
+                <h3>Briefing &amp; Descoberta</h3>
+                <p>Entendemos o objetivo, o público e a mensagem que sua marca precisa comunicar antes de qualquer decisão criativa.</p>
+                <span class="method-step-line" aria-hidden="true"></span>
+              </article>
+
+              <article class="method-step reveal" data-step="02">
+                <div class="method-step-icon-bg" aria-hidden="true"><i class="fas fa-pen-fancy"></i></div>
+                <span class="method-number" aria-hidden="true">02</span>
+                <div class="method-step-icon" aria-hidden="true"><i class="fas fa-pen-ruler"></i></div>
+                <h3>Roteiro &amp; Direção</h3>
+                <p>Estruturamos a narrativa visual: roteiro, referências e direção criativa alinhados ao propósito do projeto.</p>
+                <span class="method-step-line" aria-hidden="true"></span>
+              </article>
+
+              <article class="method-step reveal" data-step="03">
+                <div class="method-step-icon-bg" aria-hidden="true"><i class="fas fa-video"></i></div>
+                <span class="method-number" aria-hidden="true">03</span>
+                <div class="method-step-icon" aria-hidden="true"><i class="fas fa-clapperboard"></i></div>
+                <h3>Produção</h3>
+                <p>Filmagem, animação ou design executados com padrão técnico profissional, do set à pós-produção.</p>
+                <span class="method-step-line" aria-hidden="true"></span>
+              </article>
+
+              <article class="method-step reveal" data-step="04">
+                <div class="method-step-icon-bg" aria-hidden="true"><i class="fas fa-rocket"></i></div>
+                <span class="method-number" aria-hidden="true">04</span>
+                <div class="method-step-icon" aria-hidden="true"><i class="fas fa-check-double"></i></div>
+                <h3>Entrega &amp; Acompanhamento</h3>
+                <p>Refinamos cada detalhe até a entrega final, com atenção ao formato e ao canal onde o conteúdo será usado.</p>
+                <span class="method-step-line" aria-hidden="true"></span>
+              </article>
+            </div>
+
+            <div class="method-cta-wrap reveal">
+              <a href="#contato" class="method-cta">
+                <i class="fas fa-comments"></i>
+                Vamos começar seu projeto
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Clientes -->
+        <section id="clientes" class="clients-showcase section reveal" aria-label="Cliente em destaque">
+          <div class="container">
+            <div class="section-title">
+              <p class="section-eyebrow">Clientes que confiam</p>
+              <h2>Marcas que já contaram sua história com a Plural.</h2>
+            </div>
+
+            <article class="client-feature reveal">
+              <div class="client-feature-media">
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente em destaque" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/900x600/1e293b/f8fafc?text=CLIENTE+EM+DESTAQUE'" />
+              </div>
+              <div class="client-feature-body">
+                <span class="client-feature-category">[Segmento do cliente] · [Tipo de parceria]</span>
+                <h3>[Título de impacto sobre a parceria com este cliente]</h3>
+                <p>[Texto curto explicando o que a Plural faz por este cliente e o tipo de resultado que essa parceria representa.]</p>
+                <dl class="client-feature-stats">
+                  <div class="client-feature-stat"><dt>[Número]</dt><dd>[Métrica]</dd></div>
+                  <div class="client-feature-stat"><dt>[Número]</dt><dd>[Métrica]</dd></div>
+                  <div class="client-feature-stat"><dt>[Número]</dt><dd>[Métrica]</dd></div>
+                </dl>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Marcas -->
+        <section class="brands-marquee-section" aria-label="Marcas que atendemos">
+          <div class="brands-marquee-inner">
+            <p class="brands-marquee-label">Marcas que atendemos</p>
+            <div class="brands-marquee-track-wrap">
+              <div class="brands-marquee-track">
+                <!-- 8 logos duplicados para efeito marquee -->
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 1" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 2" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 3" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 4" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 5" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 6" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 7" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 8" class="brand-logo" width="120" height="40" loading="lazy" />
+                <!-- Duplicata para loop -->
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 1" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 2" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 3" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 4" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 5" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 6" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 7" class="brand-logo" width="120" height="40" loading="lazy" />
+                <img src="assets/img/logo-cliente-adidas.jpg" alt="Cliente 8" class="brand-logo" width="120" height="40" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Expertises -->
+        <section id="expertises" class="expertises-section" aria-label="Nossas expertises">
+          <div class="expertises-bg" aria-hidden="true">
+            <div class="expertises-orb expertises-orb--1"></div>
+            <div class="expertises-orb expertises-orb--2"></div>
+            <div class="expertises-orb expertises-orb--3"></div>
+          </div>
+
+          <div class="container expertises-container">
+            <div class="section-title expertises-title reveal">
+              <p class="section-eyebrow expertises-eyebrow">Expertises</p>
+              <h2>O que colocamos a serviço da sua marca</h2>
+              <p class="section-subtitle expertises-subtitle">
+                Quatro pilares criativos que se combinam para transformar ideias em experiências visuais memoráveis.
+              </p>
+            </div>
+
+            <div class="expertises-grid">
+              <article class="expertise-card reveal">
+                <span class="expertise-number" aria-hidden="true">01</span>
+                <div class="expertise-icon" aria-hidden="true"><i class="fas fa-clapperboard"></i></div>
+                <h3>Produção de Vídeo</h3>
+                <p>Desenvolvemos soluções criativas e estratégicas para fortalecer sua marca.</p>
+                <ul class="expertise-features">
+                  <li>Roteiro e direção</li>
+                  <li>Filmagem profissional</li>
+                  <li>Edição e color grading</li>
+                </ul>
+                <a href="#contato" class="expertise-cta">Saber mais <i class="fas fa-arrow-right"></i></a>
+              </article>
+
+              <article class="expertise-card reveal">
+                <span class="expertise-number" aria-hidden="true">02</span>
+                <div class="expertise-icon" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></div>
+                <h3>Motion Graphics</h3>
+                <p>Produzimos animações marcantes que explicam ideias e encantam clientes.</p>
+                <ul class="expertise-features">
+                  <li>Animações 2D/3D</li>
+                  <li>Infográficos animados</li>
+                  <li>Vinhetas personalizadas</li>
+                </ul>
+                <a href="#contato" class="expertise-cta">Saber mais <i class="fas fa-arrow-right"></i></a>
+              </article>
+
+              <article class="expertise-card reveal">
+                <span class="expertise-number" aria-hidden="true">03</span>
+                <div class="expertise-icon" aria-hidden="true"><i class="fas fa-palette"></i></div>
+                <h3>Design Visual</h3>
+                <p>Criamos identidade visual e recursos gráficos que fortalecem sua marca.</p>
+                <ul class="expertise-features">
+                  <li>Branding completo</li>
+                  <li>Social media design</li>
+                  <li>Materiais promocionais</li>
+                </ul>
+                <a href="#contato" class="expertise-cta">Saber mais <i class="fas fa-arrow-right"></i></a>
+              </article>
+
+              <article class="expertise-card reveal">
+                <span class="expertise-number" aria-hidden="true">04</span>
+                <div class="expertise-icon" aria-hidden="true"><i class="fas fa-rocket"></i></div>
+                <h3>Estratégia Digital</h3>
+                <p>Planejamento e análise focados em maximizar o impacto do seu conteúdo.</p>
+                <ul class="expertise-features">
+                  <li>Plano de conteúdo</li>
+                  <li>Análise de performance</li>
+                  <li>Otimização para plataformas</li>
+                </ul>
+                <a href="#contato" class="expertise-cta">Saber mais <i class="fas fa-arrow-right"></i></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Cases Home -->
+        <section id="cases" class="cases-home-section" aria-label="Cases em destaque">
+          <div class="cases-home-bg" aria-hidden="true">
+            <div class="cases-home-orb cases-home-orb--1"></div>
+            <div class="cases-home-orb cases-home-orb--2"></div>
+          </div>
+
+          <div class="container cases-home-container">
+            <header class="cases-home-header reveal">
+              <span class="cases-home-eyebrow">CASES</span>
+              <h2 class="cases-home-title">Projetos que traduzem nossa visão em resultado.</h2>
+            </header>
+
+            <div class="cases-home-grid">
+              <article class="case-home-card reveal" data-video="assets/videos/video1-hero.mp4" data-title="Uma marca para celebrar 40 anos de estrada" tabindex="0" role="button" aria-label="Abrir case: Uma marca para celebrar 40 anos de estrada">
+                <div class="case-home-media">
+                  <img src="assets/img/Imagem 1.png" alt="Uma marca para celebrar 40 anos de estrada" loading="lazy" />
                 </div>
-                <div class="about-us-pillar">
-                  <div class="about-us-icon">
-                    <i class="fas fa-clapperboard"></i>
-                  </div>
-                  <h3>Missão</h3>
-                  <p>Transformar conceitos em conteúdo visual impactante, unindo propósito, técnica e sensibilidade estética em cada entrega.</p>
+                <div class="case-home-body">
+                  <span class="case-home-client">GRUPO MATEUS</span>
+                  <h3 class="case-home-card-title">Uma marca para celebrar 40 anos de estrada</h3>
+                  <p class="case-home-desc">Selo comemorativo construído a partir da trajetória do maior varejista do Norte e Nordeste — uma identidade que carrega história, território e pertencimento.</p>
+                  <span class="case-home-cta">VER CASE COMPLETO <i class="fas fa-arrow-right"></i></span>
+                </div>
+              </article>
+
+              <article class="case-home-card reveal" data-video="assets/videos/project-2.mp4" data-title="Do bairro para a tela, do jeito que o cliente reconhece" tabindex="0" role="button" aria-label="Abrir case: Do bairro para a tela, do jeito que o cliente reconhece">
+                <div class="case-home-media">
+                  <img src="assets/img/portfolio/project-2.jpg" alt="Do bairro para a tela" loading="lazy" />
+                </div>
+                <div class="case-home-body">
+                  <span class="case-home-client">CARAJÁS HOME CENTER</span>
+                  <h3 class="case-home-card-title">Do bairro para a tela, do jeito que o cliente reconhece</h3>
+                  <p class="case-home-desc">Reposicionamento de marca com foco no regionalismo e na proximidade. Uma campanha que devolveu ao cliente o protagonismo da narrativa.</p>
+                  <span class="case-home-cta">VER CASE COMPLETO <i class="fas fa-arrow-right"></i></span>
+                </div>
+              </article>
+
+              <article class="case-home-card reveal" data-video="assets/videos/project-3.mp4" data-title="A chegada que virou filme, música e memória" tabindex="0" role="button" aria-label="Abrir case: A chegada que virou filme, música e memória">
+                <div class="case-home-media">
+                  <img src="assets/img/project-3.jpg" alt="A chegada que virou filme" loading="lazy" />
+                </div>
+                <div class="case-home-body">
+                  <span class="case-home-client">GRUPO MATEUS</span>
+                  <h3 class="case-home-card-title">A chegada que virou filme, música e memória</h3>
+                  <p class="case-home-desc">Campanha de expansão para Recife e Olinda. Um projeto que uniu sensibilidade, técnica e orgulho regional em cada frame — e virou uma das peças mais emocionantes do varejo de alimentos no Brasil.</p>
+                  <span class="case-home-cta">VER CASE COMPLETO <i class="fas fa-arrow-right"></i></span>
+                </div>
+              </article>
+
+              <article class="case-home-card reveal" data-video="assets/videos/project-2.mp4" data-title="Do empório pra sua casa: uma marca inteira do zero" tabindex="0" role="button" aria-label="Abrir case: Do empório pra sua casa: uma marca inteira do zero">
+                <div class="case-home-media">
+                  <img src="assets/img/portfolio/project-2.jpg" alt="Do empório pra sua casa" loading="lazy" />
+                </div>
+                <div class="case-home-body">
+                  <span class="case-home-client">SPAZIO · MATEUS</span>
+                  <h3 class="case-home-card-title">Do empório pra sua casa: uma marca inteira do zero</h3>
+                  <p class="case-home-desc">Branding, naming e design de embalagem para a linha de blends de marca própria. Um projeto completo, do conceito inicial à gôndola do supermercado.</p>
+                  <span class="case-home-cta">VER CASE COMPLETO <i class="fas fa-arrow-right"></i></span>
+                </div>
+              </article>
+            </div>
+
+            <div class="cases-home-cta-wrap reveal">
+              <a href="portfolio.html" class="cases-home-cta-btn">VER O PORTFÓLIO COMPLETO <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Team -->
+        <section id="sobre" class="about-section section alt reveal" aria-label="Sobre a Plural Criativo">
+          <div class="container">
+            <div class="section-title">
+              <h2>Time</h2>
+              <p class="section-subtitle">Transformamos ideias em experiências visuais impactantes através da produção audiovisual criativa.</p>
+            </div>
+
+            <div class="team-grid">
+              <div class="team-member reveal">
+                <div class="member-photo">
+                  <img src="assets/img/imagem.jpg" alt="Carlos Varela" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x600/1e293b/f8fafc?text=EQUIPE'" />
+                </div>
+                <h3>Carlos Varela</h3>
+                <p class="muted">Diretor Criativo</p>
+                <p>+ anos de experiência em produção audiovisual</p>
+                <div class="social-links"><a href="https://www.instagram.com/carlosvarela.pro/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div>
+              </div>
+
+              <div class="team-member reveal">
+                <div class="member-photo"><img src="assets/img/imagem-eqp-2.jpg" alt="Pessoa 2" loading="lazy" /></div>
+                <h3>Pessoa 2</h3>
+                <p class="muted">Designer</p>
+                <p>Especialista em animações 3D e efeitos visuais</p>
+                <div class="social-links"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div>
+              </div>
+
+              <div class="team-member reveal">
+                <div class="member-photo"><img src="assets/img/imagem-eqp-3.jpg" alt="Pessoa 3" loading="lazy" /></div>
+                <h3>Pessoa 3</h3>
+                <p class="muted">Editor</p>
+                <p>Expert em color grading e storytelling visual</p>
+                <div class="social-links"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sobre a Plural -->
+        <section id="sobre-plural" class="brand-about-section" aria-label="Sobre a Plural Criativo">
+          <div class="container brand-about-grid">
+            <div class="brand-about-main">
+              <p class="brand-about-eyebrow">Sobre a Plural</p>
+              <h2 class="brand-about-title">Anos transformando marcas do Norte e Nordeste em histórias que geram resultado.</h2>
+              <p class="brand-about-text">Nascemos com a convicção de que produção audiovisual de qualidade não deveria ser privilégio de poucos. Construímos vídeos, motion e design que unem sensibilidade estética à estratégia de negócio de cada cliente.</p>
+            </div>
+
+            <div class="brand-about-divider" aria-hidden="true"></div>
+
+            <div class="brand-about-side">
+              <p class="brand-about-quote">Não trabalhamos com achismo. Trabalhamos com direção criativa, com técnica e com propósito que faz a mensagem chegar.</p>
+              <p class="brand-about-author">Equipe Plural Criativo</p>
+
+              <div class="brand-about-tags" role="list">
+                <span role="listitem">Vídeo</span>
+                <span role="listitem">Motion</span>
+                <span role="listitem">Design</span>
+                <span role="listitem">Estratégia</span>
+                <span role="listitem">Branding</span>
+                <span role="listitem">Social</span>
+                <span role="listitem">Produção</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Aprendizados -->
+        <section id="aprendemos" class="learnings-section" aria-label="O que aprendemos ao longo dos projetos">
+          <div class="container learnings-grid">
+            <div class="learnings-intro">
+              <p class="learnings-eyebrow">Aprendizados</p>
+              <h2 class="learnings-title">O que aprendemos produzindo para marcas exigentes, colocamos aqui.</h2>
+              <p class="learnings-text">Conteúdo prático baseado em projetos reais, sem enrolação, para quem também quer elevar o nível da sua comunicação visual.</p>
+            </div>
+
+            <div class="learnings-cards">
+              <article class="learnings-card learnings-card--featured reveal">
+                <span class="learnings-number">01</span>
+                <h3>Roteiro é decisão de negócio, não só criativa.</h3>
+                <p>Reunimos os principais aprendizados de briefings reais: como alinhar expectativa, prazo e objetivo antes de gravar o primeiro segundo.</p>
+                <a href="#contato" class="learnings-cta">Acessar conteúdo <i class="fas fa-arrow-right"></i></a>
+              </article>
+
+              <article class="learnings-card reveal">
+                <span class="learnings-number">02</span>
+                <h3>Motion sem estratégia é só enfeite.</h3>
+                <p>Entenda quando animação realmente melhora a comunicação da sua marca e quando ela só encarece a entrega sem entregar clareza.</p>
+                <a href="#contato" class="learnings-cta">Acessar conteúdo <i class="fas fa-arrow-right"></i></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="section contact-section reveal">
+          <div class="container">
+            <div class="section-title">
+              <h2>Vamos Conversar</h2>
+              <p class="section-subtitle">Pronto para transformar sua visão em conteúdo impactante?</p>
+            </div>
+
+            <div class="contact-grid">
+              <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                  <label for="name">Nome Completo *</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail *</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="seu@email.com" required autocomplete="email" />
+                </div>
+                <div class="form-group">
+                  <label for="company">Empresa</label>
+                  <input type="text" id="company" name="company" class="form-control" placeholder="(opcional)" autocomplete="organization" />
+                </div>
+                <div class="form-group">
+                  <label for="project">Tipo de Projeto</label>
+                  <select id="project" name="project" class="form-control">
+                    <option value="">Selecione uma opção</option>
+                    <option value="Producao de Video">🎬 Produção de Vídeo</option>
+                    <option value="Motion Graphics">✨ Motion Graphics</option>
+                    <option value="Design Grafico">🎨 Design Gráfico</option>
+                    <option value="Estrategia de Conteudo">🚀 Estratégia de Conteúdo</option>
+                    <option value="Outro">💡 Outro</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Mensagem *</label>
+                  <textarea id="message" name="message" class="form-control" placeholder="Conte-nos sobre seu projeto, ideias, orçamento e prazos..." rows="6" required></textarea>
+                  <div class="char-counter" id="charCounter">0/1000</div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                </button>
+              </form>
+
+              <div class="contact-info">
+                <div class="info-item">
+                  <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div><h3>Nossa Localização</h3><p>Rua. Presidente Vargas<br />Parte de cima do burundangas<br />63250-000</p></div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon"><i class="fas fa-phone"></i></div>
+                  <div><h3>Telefone</h3><p><a href="tel:+5588994462677">(88) 99446-2677</a></p></div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon"><i class="fas fa-clock"></i></div>
+                  <div><h3>Horário Comercial</h3><p>Segunda - Sexta: 8h às 18h<br />Sábado: 8h às 12h</p></div>
+                </div>
+                <div class="social-links-large">
+                  <a href="https://instagram.com/pluralcriativo" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="contact-cta">
+                  <h3 class="contact-cta-title">Tem um projeto em mente?</h3>
+                  <p class="contact-cta-text">Conte sua ideia para nossa equipe. Vamos transformar sua visão em realidade.</p>
+                  <a href="https://wa.me/5588994462677" target="_blank" rel="noopener noreferrer" class="btn btn-primary contact-cta-btn">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div class="about-us-media reveal">
-              <div class="about-us-image-wrapper">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
-                  alt="Equipe Plural Criativo em produção audiovisual"
-                  loading="lazy"
-                />
-                <div class="about-us-quote-card">
-                  <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                  </div>
-                  <p class="quote-text">
-                    Se você ou sua organização têm uma história para contar, uma ideia para compartilhar ou uma mensagem para divulgar, podemos ajudá-los a dar vida a ela.
-                  </p>
-                  <p class="quote-author">Equipe Plural Criativo</p>
-                </div>
-              </div>
+        <!-- Video Modal -->
+        <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Player de vídeo">
+          <div class="modal-backdrop" id="modalBackdrop"></div>
+          <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Fechar vídeo"><i class="fas fa-times"></i></button>
+            <div class="modal-video">
+              <video id="modalVideo" controls playsinline preload="metadata">Seu navegador não suporta a tag de vídeo.</video>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- ========================================== -->
-      <!-- MÉTODO                                      -->
-      <!-- ========================================== -->
-      <section id="metodo" class="method-section section alt" aria-label="Nosso método de trabalho">
-        <div class="container">
-          <div class="section-title method-header reveal">
-            <p class="method-eyebrow">
-              <span class="method-eyebrow-line"></span>
-              NOSSO MÉTODO
-              <span class="method-eyebrow-line"></span>
-            </p>
-            <h2 class="method-title">
-              Como <span class="method-title-highlight">Trabalhamos</span>
-            </h2>
-            <p class="section-subtitle method-subtitle">
-              Um processo claro, do briefing à entrega final — com propósito em cada etapa.
-            </p>
-          </div>
-
-          <div class="method-grid">
-            <article class="method-step reveal" data-step="01">
-              <div class="method-step-icon-bg" aria-hidden="true">
-                <i class="fas fa-search"></i>
-              </div>
-              <span class="method-number" aria-hidden="true">01</span>
-              <div class="method-step-icon" aria-hidden="true">
-                <i class="fas fa-lightbulb"></i>
-              </div>
-              <h3>Briefing &amp; Descoberta</h3>
-              <p>Entendemos o objetivo, o público e a mensagem que sua marca precisa comunicar antes de qualquer decisão criativa.</p>
-              <span class="method-step-line" aria-hidden="true"></span>
-            </article>
-
-            <article class="method-step reveal" data-step="02">
-              <div class="method-step-icon-bg" aria-hidden="true">
-                <i class="fas fa-pen-fancy"></i>
-              </div>
-              <span class="method-number" aria-hidden="true">02</span>
-              <div class="method-step-icon" aria-hidden="true">
-                <i class="fas fa-pen-ruler"></i>
-              </div>
-              <h3>Roteiro &amp; Direção</h3>
-              <p>Estruturamos a narrativa visual: roteiro, referências e direção criativa alinhados ao propósito do projeto.</p>
-              <span class="method-step-line" aria-hidden="true"></span>
-            </article>
-
-            <article class="method-step reveal" data-step="03">
-              <div class="method-step-icon-bg" aria-hidden="true">
-                <i class="fas fa-video"></i>
-              </div>
-              <span class="method-number" aria-hidden="true">03</span>
-              <div class="method-step-icon" aria-hidden="true">
-                <i class="fas fa-clapperboard"></i>
-              </div>
-              <h3>Produção</h3>
-              <p>Filmagem, animação ou design executados com padrão técnico profissional, do set à pós-produção.</p>
-              <span class="method-step-line" aria-hidden="true"></span>
-            </article>
-
-            <article class="method-step reveal" data-step="04">
-              <div class="method-step-icon-bg" aria-hidden="true">
-                <i class="fas fa-rocket"></i>
-              </div>
-              <span class="method-number" aria-hidden="true">04</span>
-              <div class="method-step-icon" aria-hidden="true">
-                <i class="fas fa-check-double"></i>
-              </div>
-              <h3>Entrega &amp; Acompanhamento</h3>
-              <p>Refinamos cada detalhe até a entrega final, com atenção ao formato e ao canal onde o conteúdo será usado.</p>
-              <span class="method-step-line" aria-hidden="true"></span>
-            </article>
-          </div>
-
-          <div class="method-cta-wrap reveal">
-            <a href="#contato" class="method-cta">
-              <i class="fas fa-comments"></i>
-              Vamos começar seu projeto
-              <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- CLIENTES                                    -->
-      <!-- ========================================== -->
-      <section id="clientes" class="clients-showcase section reveal" aria-label="Cliente em destaque">
-        <div class="container">
-          <div class="section-title">
-            <p class="section-eyebrow">Clientes que confiam</p>
-            <h2>Marcas que já contaram sua história com a Plural.</h2>
-          </div>
-
-          <article class="client-feature reveal">
-            <div class="client-feature-media">
-              <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&q=80"
-                alt="Cliente em destaque"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-feature-body">
-              <span class="client-feature-category">Varejo · Campanha Institucional</span>
-              <h3>Uma parceria que atravessa gerações</h3>
-              <p>Há mais de 5 anos, desenvolvemos campanhas que conectam o maior varejista do Norte e Nordeste ao seu público, unindo emoção e resultado.</p>
-              <dl class="client-feature-stats">
-                <div class="client-feature-stat"><dt>40+</dt><dd>Anos de história</dd></div>
-                <div class="client-feature-stat"><dt>120+</dt><dd>Projetos entregues</dd></div>
-                <div class="client-feature-stat"><dt>3</dt><dd>Estados atendidos</dd></div>
-              </dl>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- MARCAS QUE ATENDEMOS                        -->
-      <!-- ========================================== -->
-      <section class="brands-marquee-section" aria-label="Marcas que atendemos">
-        <div class="brands-marquee-inner">
-          <p class="brands-marquee-label">Marcas que atendemos</p>
-          <div class="brands-marquee-track-wrap">
-            <div class="brands-marquee-track">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 1%3C/text%3E%3C/svg%3E" alt="Cliente 1" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 2%3C/text%3E%3C/svg%3E" alt="Cliente 2" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 3%3C/text%3E%3C/svg%3E" alt="Cliente 3" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 4%3C/text%3E%3C/svg%3E" alt="Cliente 4" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 5%3C/text%3E%3C/svg%3E" alt="Cliente 5" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 6%3C/text%3E%3C/svg%3E" alt="Cliente 6" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 7%3C/text%3E%3C/svg%3E" alt="Cliente 7" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 8%3C/text%3E%3C/svg%3E" alt="Cliente 8" class="brand-logo" width="120" height="40" loading="lazy" />
-              <!-- Duplicação para loop infinito -->
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 1%3C/text%3E%3C/svg%3E" alt="Cliente 1" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 2%3C/text%3E%3C/svg%3E" alt="Cliente 2" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 3%3C/text%3E%3C/svg%3E" alt="Cliente 3" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 4%3C/text%3E%3C/svg%3E" alt="Cliente 4" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 5%3C/text%3E%3C/svg%3E" alt="Cliente 5" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 6%3C/text%3E%3C/svg%3E" alt="Cliente 6" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 7%3C/text%3E%3C/svg%3E" alt="Cliente 7" class="brand-logo" width="120" height="40" loading="lazy" />
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect width='120' height='40' fill='%23334155' rx='4'/%3E%3Ctext x='60' y='26' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%2394a3b8'%3EMARCA 8%3C/text%3E%3C/svg%3E" alt="Cliente 8" class="brand-logo" width="120" height="40" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- EXPERTISES                                  -->
-      <!-- ========================================== -->
-      <section id="expertises" class="expertises-section" aria-label="Nossas expertises">
-        <div class="expertises-bg" aria-hidden="true">
-          <div class="expertises-orb expertises-orb--1"></div>
-          <div class="expertises-orb expertises-orb--2"></div>
-          <div class="expertises-orb expertises-orb--3"></div>
-        </div>
-
-        <div class="container expertises-container">
-          <div class="section-title expertises-title reveal">
-            <p class="section-eyebrow expertises-eyebrow">Expertises</p>
-            <h2>O que colocamos a serviço da sua marca</h2>
-            <p class="section-subtitle expertises-subtitle">
-              Quatro pilares criativos que se combinam para transformar ideias
-              em experiências visuais memoráveis.
-            </p>
-          </div>
-
-          <div class="expertises-grid">
-            <article class="expertise-card reveal">
-              <span class="expertise-number" aria-hidden="true">01</span>
-              <div class="expertise-icon" aria-hidden="true"><i class="fas fa-clapperboard"></i></div>
-              <h3>Produção de Vídeo</h3>
-              <p>Desenvolvemos soluções criativas e estratégicas para fortalecer sua marca.</p>
-              <ul class="expertise-features">
-                <li>Roteiro e direção</li>
-                <li>Filmagem profissional</li>
-                <li>Edição e color grading</li>
-              </ul>
-              <a href="#contato" class="expertise-cta">Saber mais <i class="fas fa-arrow-right"></i></a>
-            </article>
-
-            <article class="expertise-card reveal">
-              <span class="expertise-number" aria-hidden="true">02</span>
-              <div class="expertise-icon" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></div>
-              <h3>Motion Graphics</h3>
-              <p>Produzimos animações marcantes que explicam ideias e encantam clientes.</p>
-              <ul class="expertise-features">
-                <li>Animações 2D/3D</li>
-                <li>Infográficos animados</li>
-                <li>Vinhetas personalizadas</li>
-              </ul>
-              <a href="#contato" class="expertise-cta">Saber mais <i class="fas fa-arrow-right"></i></a>
-            </article>
-
-            <article class="expertise-card reveal">
-              <span class="expertise-number" aria-hidden="true">03</span>
-              <div class="expertise-icon" aria-hidden="true"><i class="fas fa-palette"></i></div>
-              <h3>Design Visual</h3>
-              <p>Criamos identidade visual e recursos gráficos que fortalecem sua marca.</p>
-              <ul class="expertise-features">
-                <li>Branding completo</li>
-                <li>Social media design</li>
-                <li>Materiais promocionais</li>
-              </ul>
-              <a href="#contato" class="expertise-cta">Saber mais <i class="fas fa-arrow-right"></i></a>
-            </article>
-
-            <article class="expertise-card reveal">
-              <span class="expertise-number" aria-hidden="true">04</span>
-              <div class="expertise-icon" aria-hidden="true"><i class="fas fa-rocket"></i></div>
-              <h3>Estratégia Digital</h3>
-              <p>Planejamento e análise focados em maximizar o impacto do seu conteúdo.</p>
-              <ul class="expertise-features">
-                <li>Plano de conteúdo</li>
-                <li>Análise de performance</li>
-                <li>Otimização para plataformas</li>
-              </ul>
-              <a href="#contato" class="expertise-cta">Saber mais <i class="fas fa-arrow-right"></i></a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- CASES                                       -->
-      <!-- ========================================== -->
-      <section id="cases" class="cases-home-section" aria-label="Cases em destaque">
-        <div class="cases-home-bg" aria-hidden="true">
-          <div class="cases-home-orb cases-home-orb--1"></div>
-          <div class="cases-home-orb cases-home-orb--2"></div>
-        </div>
-
-        <div class="container cases-home-container">
-          <header class="cases-home-header reveal">
-            <span class="cases-home-eyebrow">CASES</span>
-            <h2 class="cases-home-title">Projetos que traduzem nossa visão em resultado.</h2>
-          </header>
-
-          <div class="cases-home-grid">
-            <!-- Case 1 -->
-            <article
-              class="case-home-card reveal"
-              data-video="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
-              data-title="Uma marca para celebrar 40 anos de estrada"
-              tabindex="0"
-              role="button"
-              aria-label="Abrir case: Uma marca para celebrar 40 anos de estrada"
-            >
-              <div class="case-home-media">
-                <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80"
-                  alt="Uma marca para celebrar 40 anos de estrada"
-                  loading="lazy"
-                />
-              </div>
-              <div class="case-home-body">
-                <span class="case-home-client">GRUPO MATEUS</span>
-                <h3 class="case-home-card-title">Uma marca para celebrar 40 anos de estrada</h3>
-                <p class="case-home-desc">
-                  Selo comemorativo construído a partir da trajetória do maior
-                  varejista do Norte e Nordeste — uma identidade que carrega
-                  história, território e pertencimento.
-                </p>
-                <span class="case-home-cta">
-                  VER CASE COMPLETO <i class="fas fa-arrow-right"></i>
-                </span>
-              </div>
-            </article>
-
-            <!-- Case 2 -->
-            <article
-              class="case-home-card reveal"
-              data-video="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
-              data-title="Do bairro para a tela, do jeito que o cliente reconhece"
-              tabindex="0"
-              role="button"
-              aria-label="Abrir case: Do bairro para a tela, do jeito que o cliente reconhece"
-            >
-              <div class="case-home-media">
-                <img
-                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80"
-                  alt="Do bairro para a tela, do jeito que o cliente reconhece"
-                  loading="lazy"
-                />
-              </div>
-              <div class="case-home-body">
-                <span class="case-home-client">CARAJÁS HOME CENTER</span>
-                <h3 class="case-home-card-title">Do bairro para a tela, do jeito que o cliente reconhece</h3>
-                <p class="case-home-desc">
-                  Reposicionamento de marca com foco no regionalismo e na
-                  proximidade. Uma campanha que devolveu ao cliente o
-                  protagonismo da narrativa.
-                </p>
-                <span class="case-home-cta">
-                  VER CASE COMPLETO <i class="fas fa-arrow-right"></i>
-                </span>
-              </div>
-            </article>
-
-            <!-- Case 3 -->
-            <article
-              class="case-home-card reveal"
-              data-video="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
-              data-title="A chegada que virou filme, música e memória"
-              tabindex="0"
-              role="button"
-              aria-label="Abrir case: A chegada que virou filme, música e memória"
-            >
-              <div class="case-home-media">
-                <img
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80"
-                  alt="A chegada que virou filme, música e memória"
-                  loading="lazy"
-                />
-              </div>
-              <div class="case-home-body">
-                <span class="case-home-client">GRUPO MATEUS</span>
-                <h3 class="case-home-card-title">A chegada que virou filme, música e memória</h3>
-                <p class="case-home-desc">
-                  Campanha de expansão para Recife e Olinda. Um projeto que uniu
-                  sensibilidade, técnica e orgulho regional em cada frame — e
-                  virou uma das peças mais emocionantes do varejo de alimentos
-                  no Brasil.
-                </p>
-                <span class="case-home-cta">
-                  VER CASE COMPLETO <i class="fas fa-arrow-right"></i>
-                </span>
-              </div>
-            </article>
-
-            <!-- Case 4 -->
-            <article
-              class="case-home-card reveal"
-              data-video="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
-              data-title="Do empório pra sua casa: uma marca inteira do zero"
-              tabindex="0"
-              role="button"
-              aria-label="Abrir case: Do empório pra sua casa: uma marca inteira do zero"
-            >
-              <div class="case-home-media">
-                <img
-                  src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&q=80"
-                  alt="Do empório pra sua casa: uma marca inteira do zero"
-                  loading="lazy"
-                />
-              </div>
-              <div class="case-home-body">
-                <span class="case-home-client">SPAZIO · MATEUS</span>
-                <h3 class="case-home-card-title">Do empório pra sua casa: uma marca inteira do zero</h3>
-                <p class="case-home-desc">
-                  Branding, naming e design de embalagem para a linha de blends
-                  de marca própria. Um projeto completo, do conceito inicial à
-                  gôndola do supermercado.
-                </p>
-                <span class="case-home-cta">
-                  VER CASE COMPLETO <i class="fas fa-arrow-right"></i>
-                </span>
-              </div>
-            </article>
-          </div>
-
-          <div class="cases-home-cta-wrap reveal">
-            <a href="#" class="cases-home-cta-btn">
-              VER O PORTFÓLIO COMPLETO <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- TIME                                        -->
-      <!-- ========================================== -->
-      <section id="sobre" class="about-section section alt reveal" aria-label="Sobre a Plural Criativo">
-        <div class="container">
-          <div class="section-title">
-            <h2>Time</h2>
-            <p class="section-subtitle">
-              Transformamos ideias em experiências visuais impactantes
-              através da produção audiovisual criativa.
-            </p>
-          </div>
-
-          <div class="team-grid">
-            <div class="team-member reveal">
-              <div class="member-photo">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Carlos Varela" loading="lazy" />
-              </div>
-              <h3>Carlos Varela</h3>
-              <p class="muted">Diretor Criativo</p>
-              <p>+15 anos de experiência em produção audiovisual</p>
-              <div class="social-links">
-                <a href="https://www.instagram.com/carlosvarela.pro/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-
-            <div class="team-member reveal">
-              <div class="member-photo">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Pessoa 2" loading="lazy" />
-              </div>
-              <h3>Pessoa 2</h3>
-              <p class="muted">Designer</p>
-              <p>Especialista em animações 3D e efeitos visuais</p>
-              <div class="social-links"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div>
-            </div>
-
-            <div class="team-member reveal">
-              <div class="member-photo">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="Pessoa 3" loading="lazy" />
-              </div>
-              <h3>Pessoa 3</h3>
-              <p class="muted">Editor</p>
-              <p>Expert em color grading e storytelling visual</p>
-              <div class="social-links"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- SOBRE A PLURAL                              -->
-      <!-- ========================================== -->
-      <section id="sobre-plural" class="brand-about-section" aria-label="Sobre a Plural Criativo">
-        <div class="container brand-about-grid">
-          <div class="brand-about-main">
-            <p class="brand-about-eyebrow">Sobre a Plural</p>
-            <h2 class="brand-about-title">
-              Anos transformando marcas do Norte e Nordeste em histórias que
-              geram resultado.
-            </h2>
-            <p class="brand-about-text">
-              Nascemos com a convicção de que produção audiovisual de qualidade
-              não deveria ser privilégio de poucos. Construímos vídeos, motion
-              e design que unem sensibilidade estética à estratégia de negócio
-              de cada cliente.
-            </p>
-          </div>
-
-          <div class="brand-about-divider" aria-hidden="true"></div>
-
-          <div class="brand-about-side">
-            <p class="brand-about-quote">
-              Não trabalhamos com achismo. Trabalhamos com direção criativa,
-              com técnica e com propósito que faz a mensagem chegar.
-            </p>
-            <p class="brand-about-author">Equipe Plural Criativo</p>
-
-            <div class="brand-about-tags" role="list">
-              <span role="listitem">Vídeo</span>
-              <span role="listitem">Motion</span>
-              <span role="listitem">Design</span>
-              <span role="listitem">Estratégia</span>
-              <span role="listitem">Branding</span>
-              <span role="listitem">Social</span>
-              <span role="listitem">Produção</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- APRENDIZADOS                                -->
-      <!-- ========================================== -->
-      <section id="aprendemos" class="learnings-section" aria-label="O que aprendemos ao longo dos projetos">
-        <div class="container learnings-grid">
-          <div class="learnings-intro">
-            <p class="learnings-eyebrow">Aprendizados</p>
-            <h2 class="learnings-title">
-              O que aprendemos produzindo para marcas exigentes, colocamos aqui.
-            </h2>
-            <p class="learnings-text">
-              Conteúdo prático baseado em projetos reais, sem enrolação, para
-              quem também quer elevar o nível da sua comunicação visual.
-            </p>
-          </div>
-
-          <div class="learnings-cards">
-            <article class="learnings-card learnings-card--featured reveal">
-              <span class="learnings-number">01</span>
-              <h3>Roteiro é decisão de negócio, não só criativa.</h3>
-              <p>Reunimos os principais aprendizados de briefings reais: como alinhar expectativa, prazo e objetivo antes de gravar o primeiro segundo.</p>
-              <a href="#contato" class="learnings-cta">Acessar conteúdo <i class="fas fa-arrow-right"></i></a>
-            </article>
-
-            <article class="learnings-card reveal">
-              <span class="learnings-number">02</span>
-              <h3>Motion sem estratégia é só enfeite.</h3>
-              <p>Entenda quando animação realmente melhora a comunicação da sua marca e quando ela só encarece a entrega sem entregar clareza.</p>
-              <a href="#contato" class="learnings-cta">Acessar conteúdo <i class="fas fa-arrow-right"></i></a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- CONTATO                                     -->
-      <!-- ========================================== -->
-      <section id="contato" class="section contact-section reveal">
-        <div class="container">
-          <div class="section-title">
-            <h2>Vamos Conversar</h2>
-            <p class="section-subtitle">Pronto para transformar sua visão em conteúdo impactante?</p>
-          </div>
-
-          <div class="contact-grid">
-            <form id="contactForm" class="contact-form">
-              <div class="form-group">
-                <label for="name">Nome Completo *</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Seu nome" required autocomplete="name" />
-              </div>
-              <div class="form-group">
-                <label for="email">E-mail *</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="seu@email.com" required autocomplete="email" />
-              </div>
-              <div class="form-group">
-                <label for="company">Empresa</label>
-                <input type="text" id="company" name="company" class="form-control" placeholder="(opcional)" autocomplete="organization" />
-              </div>
-              <div class="form-group">
-                <label for="project">Tipo de Projeto</label>
-                <select id="project" name="project" class="form-control">
-                  <option value="">Selecione uma opção</option>
-                  <option value="Producao de Video">🎬 Produção de Vídeo</option>
-                  <option value="Motion Graphics">✨ Motion Graphics</option>
-                  <option value="Design Grafico">🎨 Design Gráfico</option>
-                  <option value="Estrategia de Conteudo">🚀 Estratégia de Conteúdo</option>
-                  <option value="Outro">💡 Outro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="message">Mensagem *</label>
-                <textarea id="message" name="message" class="form-control" placeholder="Conte-nos sobre seu projeto, ideias, orçamento e prazos..." rows="6" required></textarea>
-                <div class="char-counter" id="charCounter">0/1000</div>
-              </div>
-              <button type="submit" class="btn btn-primary">
-                <i class="fas fa-paper-plane"></i> Enviar Mensagem
-              </button>
-            </form>
-
-            <div class="contact-info">
-              <div class="info-item">
-                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <div><h3>Nossa Localização</h3><p>Rua. Presidente Vargas<br />Parte de cima do burundangas<br />63250-000</p></div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon"><i class="fas fa-phone"></i></div>
-                <div><h3>Telefone</h3><p><a href="tel:+5588994462677">(88) 99446-2677</a></p></div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon"><i class="fas fa-clock"></i></div>
-                <div><h3>Horário Comercial</h3><p>Segunda - Sexta: 8h às 18h<br />Sábado: 8h às 12h</p></div>
-              </div>
-              <div class="social-links-large">
-                <a href="https://instagram.com/pluralcriativo" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-              <div class="contact-cta">
-                <h3 class="contact-cta-title">Tem um projeto em mente?</h3>
-                <p class="contact-cta-text">Conte sua ideia para nossa equipe. Vamos transformar sua visão em realidade.</p>
-                <a href="https://wa.me/5588994462677" target="_blank" rel="noopener noreferrer" class="btn btn-primary contact-cta-btn">
-                  <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- MODAL DE VÍDEO                              -->
-      <!-- ========================================== -->
-      <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Player de vídeo">
-        <div class="modal-backdrop" id="modalBackdrop"></div>
-        <div class="modal-content">
-          <button class="modal-close" id="modalClose" aria-label="Fechar vídeo"><i class="fas fa-times"></i></button>
-          <div class="modal-video">
-            <video id="modalVideo" controls playsinline preload="metadata">Seu navegador não suporta a tag de vídeo.</video>
-          </div>
-        </div>
-      </div>
-
-      <!-- ========================================== -->
-      <!-- BOTÃO FLUTUANTE WHATSAPP                    -->
-      <!-- ========================================== -->
-      <a 
-        href="https://wa.me/5588994462677" 
-        class="whatsapp-float" 
-        id="whatsappFloat"
-        target="_blank" 
-        rel="noopener noreferrer" 
-        aria-label="Fale conosco pelo WhatsApp"
-        title="Fale conosco pelo WhatsApp"
-      >
-        <i class="fab fa-whatsapp"></i>
-      </a>
+        <!-- WhatsApp Float -->
+        <a href="https://wa.me/5588994462677" class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp" title="Fale conosco pelo WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
     </main>
 
-    <!-- ============================================= -->
-    <!-- FOOTER                                       -->
-    <!-- ============================================= -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main">
           <div class="footer-line footer-line--top">
             <p class="footer-copy">
-              &copy; 2025 Plural Criativo. Todos os direitos reservados.
+              &copy; <span id="year"></span> Plural Criativo. Todos os direitos reservados.
               <span class="footer-sep">·</span>
-              <a href="#" class="footer-link-inline">Política de Privacidade</a>
+              <a href="politicas.html" class="footer-link-inline">Política de Privacidade</a>
             </p>
           </div>
 
@@ -4293,551 +602,12 @@ section[id] {
 
         <div class="footer-bottom">
           <p class="footer-credit">
-            Desenvolvido por 
-            <a href="https://www.instagram.com/ithalo.dev/" target="_blank" rel="noopener noreferrer">Antonio Ithalo</a>
+            Desenvolvido por <a href="https://www.instagram.com/ithalo.dev/" target="_blank" rel="noopener noreferrer">Antonio Ithalo</a>
           </p>
         </div>
       </div>
     </footer>
 
-    <script>
-// =============================================
-// SCRIPT PROFISSIONAL - PLURAL CRIATIVO - COMPLETO
-// =============================================
-
-document.addEventListener("DOMContentLoaded", function () {
-  // =============================================
-  // 1. INICIALIZAÇÃO
-  // =============================================
-
-  console.log("🔵 Plural Criativo - Site inicializado");
-
-  // =============================================
-  // 2. CONFIGURAÇÕES GLOBAIS
-  // =============================================
-
-  const config = {
-    smoothScrollDuration: 800,
-    revealThreshold: 0.1,
-    headerTransitionThreshold: 50,
-    videoModalTransition: 300,
-    whatsappShowThreshold: 300,
-  };
-
-  // =============================================
-  // 3. FUNÇÕES UTILITÁRIAS
-  // =============================================
-
-  const debounce = (func, wait) => {
-    let timeout;
-    return (...args) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), wait);
-    };
-  };
-
-  const throttle = (func, limit) => {
-    let inThrottle;
-    return (...args) => {
-      if (!inThrottle) {
-        func.apply(this, args);
-        inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
-      }
-    };
-  };
-
-  // =============================================
-  // 4. BOTÃO FLUTUANTE WHATSAPP
-  // =============================================
-
-  function initWhatsAppButton() {
-    const whatsappButton = document.getElementById("whatsappFloat");
-    if (!whatsappButton) return;
-
-    function checkScrollVisibility() {
-      const scrollY = window.scrollY;
-      if (scrollY > config.whatsappShowThreshold) {
-        whatsappButton.classList.add("visible");
-      } else {
-        whatsappButton.classList.remove("visible");
-      }
-    }
-
-    checkScrollVisibility();
-    window.addEventListener("scroll", throttle(checkScrollVisibility, 100));
-    window.addEventListener("resize", debounce(checkScrollVisibility, 150));
-  }
-
-  // =============================================
-  // 5. HEADER INTERATIVO
-  // =============================================
-
-  const header = document.getElementById("mainHeader");
-
-  function updateHeader() {
-    const scrollY = window.scrollY;
-    if (scrollY > config.headerTransitionThreshold) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-    updateActiveNav();
-  }
-
-  // =============================================
-  // 6. NAVEGAÇÃO SMOOTH SCROLL
-  // =============================================
-
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      const href = this.getAttribute("href");
-
-      if (href === "#" || href === "#top") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        e.preventDefault();
-        return;
-      }
-
-      const target = document.querySelector(href);
-      if (!target) return;
-
-      e.preventDefault();
-
-      const headerHeight = header.offsetHeight;
-      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = targetPosition - headerHeight - 20;
-
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-      closeMobileMenu();
-    });
-  });
-
-  // =============================================
-  // 7. MENU MOBILE
-  // =============================================
-
-  const navToggle = document.getElementById("navToggleSticky");
-  const navList = document.getElementById("navListSticky");
-
-  function toggleMobileMenu() {
-    const isOpen = navList.classList.toggle("active");
-    navToggle.setAttribute("aria-expanded", isOpen);
-    document.body.style.overflow = isOpen ? "hidden" : "";
-  }
-
-  function closeMobileMenu() {
-    navList.classList.remove("active");
-    navToggle.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
-  }
-
-  if (navToggle && navList) {
-    navToggle.addEventListener("click", toggleMobileMenu);
-    navList.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMobileMenu);
-    });
-    document.addEventListener("click", (e) => {
-      if (
-        window.innerWidth <= 768 &&
-        !navToggle.contains(e.target) &&
-        !navList.contains(e.target) &&
-        navList.classList.contains("active")
-      ) {
-        closeMobileMenu();
-      }
-    });
-  }
-
-  // =============================================
-  // 8. SCROLL REVEAL
-  // =============================================
-
-  function initScrollReveal() {
-    const revealElements = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.25 }
-    );
-    revealElements.forEach((el) => observer.observe(el));
-  }
-
-  // =============================================
-  // 9. MODAL DE VÍDEO (CASES)
-  // =============================================
-
-  const modal = document.getElementById("modal");
-  const modalVideo = document.getElementById("modalVideo");
-  const modalClose = document.getElementById("modalClose");
-  const modalBackdrop = document.getElementById("modalBackdrop");
-
-  function openVideoModal(src, title) {
-    if (!modal || !modalVideo) return;
-    modalVideo.src = src;
-    modal.load();
-    modal.setAttribute("aria-hidden", "false");
-    modal.style.display = "flex";
-    document.body.classList.add("modal-open");
-    document.body.style.overflow = "hidden";
-
-    const playPromise = modalVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        modalVideo.setAttribute("controls", "true");
-      });
-    }
-    setTimeout(() => { modal.focus(); }, 100);
-  }
-
-  function closeVideoModal() {
-    if (!modal || !modalVideo) return;
-    modal.setAttribute("aria-hidden", "true");
-    modal.style.display = "none";
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
-    modalVideo.src = "";
-    modalVideo.removeAttribute("controls");
-    document.body.classList.remove("modal-open");
-    document.body.style.overflow = "";
-  }
-
-  if (modalClose) modalClose.addEventListener("click", closeVideoModal);
-  if (modalBackdrop) modalBackdrop.addEventListener("click", closeVideoModal);
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal && modal.getAttribute("aria-hidden") === "false") {
-      closeVideoModal();
-    }
-  });
-
-  // Case cards
-  document.querySelectorAll(".case-home-card").forEach((card) => {
-    const trigger = () => {
-      const src = card.getAttribute("data-video");
-      const title = card.getAttribute("data-title") || "";
-      if (src) openVideoModal(src, title);
-    };
-    card.addEventListener("click", trigger);
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        trigger();
-      }
-    });
-  });
-
-  // =============================================
-  // 10. FORMULÁRIO DE CONTATO (SIMULAÇÃO)
-  // =============================================
-
-  const contactForm = document.getElementById("contactForm");
-
-  if (contactForm) {
-    const inputs = contactForm.querySelectorAll("input, textarea, select");
-    inputs.forEach((input) => {
-      input.addEventListener("blur", () => validateField(input));
-      input.addEventListener("input", () => clearError(input));
-    });
-
-    const messageTextarea = contactForm.querySelector("#message");
-    const charCounter = contactForm.querySelector("#charCounter");
-
-    if (messageTextarea && charCounter) {
-      messageTextarea.addEventListener("input", function () {
-        const currentLength = this.value.length;
-        const maxLength = 1000;
-        charCounter.textContent = `${currentLength}/${maxLength}`;
-        if (currentLength > maxLength) {
-          this.value = this.value.substring(0, maxLength);
-          charCounter.textContent = `${maxLength}/${maxLength}`;
-          charCounter.style.color = "#ef4444";
-        } else if (currentLength > 900) {
-          charCounter.style.color = "#f59e0b";
-        } else {
-          charCounter.style.color = "#64748b";
-        }
-      });
-    }
-
-    function validateField(field) {
-      const value = field.value.trim();
-      const fieldName = field.getAttribute("name");
-
-      if (field.hasAttribute("required") && !value) {
-        showError(field, "Este campo é obrigatório");
-        return false;
-      }
-      if (fieldName === "email" && value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) {
-          showError(field, "Por favor, insira um email válido");
-          return false;
-        }
-      }
-      return true;
-    }
-
-    function showError(field, message) {
-      clearError(field);
-      const errorDiv = document.createElement("div");
-      errorDiv.className = "error-message";
-      errorDiv.textContent = message;
-      field.parentNode.appendChild(errorDiv);
-      field.style.borderColor = "#ef4444";
-    }
-
-    function clearError(field) {
-      const errorDiv = field.parentNode.querySelector(".error-message");
-      if (errorDiv) errorDiv.remove();
-      field.style.borderColor = "";
-    }
-
-    contactForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      let isValid = true;
-      inputs.forEach((input) => {
-        if (!validateField(input)) isValid = false;
-      });
-
-      if (!isValid) {
-        showNotification("Por favor, corrija os erros no formulário.", "error");
-        return;
-      }
-
-      const submitButton = contactForm.querySelector('button[type="submit"]');
-      const originalButtonText = submitButton.innerHTML;
-      submitButton.disabled = true;
-      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-
-      showNotification("Enviando mensagem...", "loading");
-
-      // Simulação de envio (substitua por integração real)
-      setTimeout(() => {
-        showNotification(
-          "Mensagem enviada com sucesso! Em breve entraremos em contato.",
-          "success"
-        );
-        contactForm.reset();
-        if (charCounter) {
-          charCounter.textContent = "0/1000";
-          charCounter.style.color = "#64748b";
-        }
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText;
-      }, 1500);
-    });
-  }
-
-  // =============================================
-  // 11. NOTIFICAÇÕES
-  // =============================================
-
-  function showNotification(message, type = "info") {
-    const existingNotification = document.querySelector(".notification");
-    if (existingNotification) existingNotification.remove();
-
-    const notification = document.createElement("div");
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-      <div class="notification-content">
-        <span>${message}</span>
-        <button class="notification-close" aria-label="Fechar">&times;</button>
-      </div>
-    `;
-
-    Object.assign(notification.style, {
-      position: "fixed",
-      top: "20px",
-      right: "20px",
-      background:
-        type === "error" ? "#ef4444" :
-        type === "success" ? "#10b981" :
-        type === "loading" ? "#3b82f6" : "#1e293b",
-      color: "white",
-      padding: "1rem 1.5rem",
-      borderRadius: "12px",
-      boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-      zIndex: "99999",
-      animation: "slideIn 0.3s ease",
-      maxWidth: "400px",
-      fontFamily: "'Poppins', sans-serif",
-      fontSize: "0.95rem",
-    });
-
-    const content = notification.querySelector(".notification-content");
-    Object.assign(content.style, {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      gap: "1rem",
-    });
-
-    const closeBtn = notification.querySelector(".notification-close");
-    Object.assign(closeBtn.style, {
-      background: "none",
-      border: "none",
-      color: "white",
-      fontSize: "1.5rem",
-      cursor: "pointer",
-      padding: "0",
-      lineHeight: "1",
-      marginLeft: "0.5rem",
-    });
-
-    closeBtn.addEventListener("click", () => {
-      notification.style.animation = "slideOut 0.3s ease";
-      setTimeout(() => notification.remove(), 300);
-    });
-
-    document.body.appendChild(notification);
-
-    if (type !== "loading") {
-      setTimeout(() => {
-        if (notification.parentNode) {
-          notification.style.animation = "slideOut 0.3s ease";
-          setTimeout(() => notification.remove(), 300);
-        }
-      }, 5000);
-    }
-  }
-
-  // =============================================
-  // 12. NAVEGAÇÃO ATIVA
-  // =============================================
-
-  function updateActiveNav() {
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-list a[href^='#']");
-    let current = "";
-    const scrollPos = window.scrollY + 150;
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-        current = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      const href = link.getAttribute("href");
-      if (href === `#${current}` || (current === "" && href === "#top")) {
-        link.classList.add("active");
-      }
-    });
-  }
-
-  // =============================================
-  // 13. ANIMAÇÃO DO TÍTULO HERO
-  // =============================================
-
-  function initHeroTitleAnimation() {
-    const title = document.querySelector(".hero-title.fill-words");
-    if (title) {
-      setTimeout(() => { title.classList.add("animating"); }, 500);
-      const spans = title.querySelectorAll("span");
-      let completedSpans = 0;
-      spans.forEach((span) => {
-        span.addEventListener("animationend", function () {
-          completedSpans++;
-          if (completedSpans === spans.length) {
-            title.classList.add("animation-complete");
-            title.classList.remove("animating");
-          }
-        });
-      });
-      setTimeout(() => {
-        if (!title.classList.contains("animation-complete")) {
-          title.classList.add("animation-complete");
-          title.classList.remove("animating");
-        }
-      }, 6000);
-    }
-  }
-
-  // =============================================
-  // 14. OTIMIZAÇÃO DO VÍDEO DO HERO
-  // =============================================
-
-  function initHeroVideoOptimization() {
-    const heroVideo = document.querySelector(".hero-video");
-    if (!heroVideo) return;
-
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) {
-      heroVideo.pause();
-      heroVideo.removeAttribute("autoplay");
-      return;
-    }
-
-    if ("IntersectionObserver" in window) {
-      const heroObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              heroVideo.play().catch(() => {});
-            } else {
-              heroVideo.pause();
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      heroObserver.observe(heroVideo);
-    }
-  }
-
-  // =============================================
-  // 15. INICIALIZAÇÃO COMPLETA
-  // =============================================
-
-  function init() {
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-    updateHeader();
-    initScrollReveal();
-    updateActiveNav();
-    initHeroTitleAnimation();
-    initHeroVideoOptimization();
-    initWhatsAppButton();
-
-    document.querySelectorAll("section").forEach((section) => {
-      section.style.opacity = "1";
-      section.style.visibility = "visible";
-    });
-  }
-
-  // =============================================
-  // 16. EVENT LISTENERS GLOBAIS
-  // =============================================
-
-  window.addEventListener("scroll", throttle(updateHeader, 100));
-  window.addEventListener("scroll", debounce(updateActiveNav, 50));
-  window.addEventListener("resize", debounce(() => {
-    updateHeader();
-    if (window.innerWidth > 768) closeMobileMenu();
-  }, 250));
-
-  window.addEventListener("load", () => {
-    const heroVideo = document.querySelector(".hero-video");
-    if (heroVideo) heroVideo.style.opacity = "1";
-  });
-
-  // =============================================
-  // 17. INICIALIZAR
-  // =============================================
-
-  init();
-});
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
