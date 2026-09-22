@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio completo da Plural Criativo - Cases, regionalidade e filmes" />
+    <title>Portfólio Completo - Plural Criativo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+
+<body class="portfolio-page page-template-page-portfolio-php">
+    <a href="index.html" class="pf-back-btn" id="pfBackBtn" data-home-url="index.html" aria-label="Voltar ao site principal">
+      <i class="fas fa-arrow-left" aria-hidden="true"></i>
+      <span>Voltar</span>
+    </a>
+
+    <header class="site-header site-header--portfolio" id="mainHeader">
+      <div class="container">
+        <div class="header-inner">
+          <a href="index.html" class="brand">
+            <img src="assets/img/logoplu.png" alt="Plural Criativo" class="brand-logo" width="200" height="50" />
+          </a>
+          <nav class="main-nav" aria-label="Navegação principal">
+            <button id="navToggleSticky" class="nav-toggle" aria-expanded="false" aria-label="Abrir/fechar menu">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <ul id="navListSticky" class="nav-list nav-list--portfolio">
+              <li><a href="index.html"><i class="fas fa-arrow-left" aria-hidden="true" style="margin-right: 6px; font-size: 0.75rem;"></i>Voltar</a></li>
+              <li><a href="#cases">Cases</a></li>
+              <li><a href="#regionalidade">Regionalidade</a></li>
+              <li><a href="index.html#contato" class="btn btn-primary btn-sm">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="site-main portfolio-page">
+      <!-- Hero Slider -->
+      <section class="pf-hero" id="pf-hero" aria-label="Destaques do portfólio" data-slides="2">
+        <div class="pf-hero-slides">
+          <div class="pf-hero-slide is-active" data-index="0">
+            <video class="pf-hero-video" muted loop playsinline preload="metadata" poster="assets/img/hero-poster.jpg" autoplay>
+              <source src="assets/videos/video1-hero.mp4" type="video/mp4" />
+            </video>
+            <div class="pf-hero-overlay"></div>
+          </div>
+          <div class="pf-hero-slide" data-index="1">
+            <video class="pf-hero-video" muted loop playsinline preload="metadata" poster="assets/img/portfolio/project-2.jpg">
+              <source src="assets/videos/project-2.mp4" type="video/mp4" />
+            </video>
+            <div class="pf-hero-overlay"></div>
+          </div>
+        </div>
+
+        <div class="pf-hero-content">
+          <div class="container">
+            <span class="pf-hero-eyebrow" id="pfHeroEyebrow">PLURAL CRIATIVO</span>
+            <h1 class="pf-hero-title" id="pfHeroTitle">Cada frame conta<br />uma história real.</h1>
+            <button type="button" class="pf-hero-play" id="pfHeroPlay" aria-label="Assistir vídeo em destaque">
+              <i class="fas fa-play"></i>
+              <span>Assistir</span>
+            </button>
+          </div>
+        </div>
+
+        <button type="button" class="pf-hero-sound" id="pfHeroSound" aria-label="Ativar/desativar som" aria-pressed="false">
+          <i class="fas fa-volume-mute" aria-hidden="true"></i>
+        </button>
+
+        <div class="pf-hero-indicators" role="tablist" aria-label="Navegação de slides">
+          <button type="button" class="pf-hero-indicator is-active" data-index="0" role="tab" aria-selected="true" aria-label="Ir para slide 1">
+            <span class="pf-hero-indicator-fill"></span>
+          </button>
+          <button type="button" class="pf-hero-indicator" data-index="1" role="tab" aria-selected="false" aria-label="Ir para slide 2">
+            <span class="pf-hero-indicator-fill"></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Cases -->
+      <section class="pf-row-section" id="cases" aria-label="Cases em destaque">
+        <div class="container pf-row-header">
+          <h2 class="pf-row-title"><i class="fas fa-clapperboard" aria-hidden="true"></i>Cases</h2>
+          <span class="pf-row-hint">ARRASTE PRO LADO <i class="fas fa-arrow-right"></i></span>
+        </div>
+
+        <div class="pf-row-wrap">
+          <div class="pf-row" data-scroll-row>
+            <article class="pf-card" data-video="assets/videos/video1-hero.mp4" data-poster="assets/img/Imagem 1.png" data-title="Uma marca inteira do zero" data-meta="2026 · Branding" tabindex="0" role="button" aria-label="Abrir vídeo: Uma marca inteira do zero">
+              <div class="pf-card-media">
+                <span class="pf-card-tag">NOVO</span>
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/Imagem 1.png" alt="Uma marca inteira do zero" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">BRANDING & IDENTIDADE</span>
+                <h3 class="pf-card-title">Uma marca inteira do zero</h3>
+                <span class="pf-card-meta">2026 · Branding</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-2.mp4" data-poster="assets/img/portfolio/project-2.jpg" data-title="A cara da gente, do jeito que o cliente reconhece" data-meta="2026 · Campanha" tabindex="0" role="button" aria-label="Abrir vídeo: A cara da gente">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/portfolio/project-2.jpg" alt="A cara da gente" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">CAMPANHA INSTITUCIONAL</span>
+                <h3 class="pf-card-title">A cara da gente, do jeito que o cliente reconhece</h3>
+                <span class="pf-card-meta">2026 · Campanha</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-3.mp4" data-poster="assets/img/project-3.jpg" data-title="A chegada que virou filme, música e memória" data-meta="2025 · Campanha" tabindex="0" role="button" aria-label="Abrir vídeo: A chegada que virou filme">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/project-3.jpg" alt="A chegada que virou filme" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">EXPANSÃO REGIONAL</span>
+                <h3 class="pf-card-title">A chegada que virou filme, música e memória</h3>
+                <span class="pf-card-meta">2025 · Campanha</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-2.mp4" data-poster="assets/img/portfolio/project-2.jpg" data-title="Animações que explicam ideias e encantam" data-meta="1:42 · Case" tabindex="0" role="button" aria-label="Abrir vídeo: Animações que explicam ideias">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/portfolio/project-2.jpg" alt="Animações que explicam ideias" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">MOTION GRAPHICS</span>
+                <h3 class="pf-card-title">Animações que explicam ideias e encantam</h3>
+                <span class="pf-card-meta">1:42 · Case</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/video1-hero.mp4" data-poster="assets/img/Imagem 1.png" data-title="Histórias que conectam marcas e pessoas" data-meta="2025 · Digital" tabindex="0" role="button" aria-label="Abrir vídeo: Histórias que conectam marcas">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/Imagem 1.png" alt="Histórias que conectam marcas" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">CONTEÚDO DIGITAL</span>
+                <h3 class="pf-card-title">Histórias que conectam marcas e pessoas</h3>
+                <span class="pf-card-meta">2025 · Digital</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-3.mp4" data-poster="assets/img/project-3.jpg" data-title="A essência da marca em movimento" data-meta="2026 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: A essência da marca em movimento">
+              <div class="pf-card-media">
+                <span class="pf-card-tag">NOVO</span>
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/project-3.jpg" alt="A essência da marca em movimento" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">FILME INSTITUCIONAL</span>
+                <h3 class="pf-card-title">A essência da marca em movimento</h3>
+                <span class="pf-card-meta">2026 · Filme</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Regionalidade -->
+      <section class="pf-row-section" id="regionalidade" aria-label="Top regionalidade">
+        <div class="container pf-row-header">
+          <h2 class="pf-row-title"><i class="fas fa-star" aria-hidden="true"></i>Top Regionalidade</h2>
+          <span class="pf-row-hint">ARRASTE PRO LADO <i class="fas fa-arrow-right"></i></span>
+        </div>
+
+        <div class="pf-row-wrap">
+          <div class="pf-row" data-scroll-row>
+            <article class="pf-card" data-video="assets/videos/project-2.mp4" data-poster="assets/img/Imagem 1.png" data-title="Caruaru e a feira de braços abertos." data-meta="1:00 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: Caruaru e a feira">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/Imagem 1.png" alt="Caruaru e a feira" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">DOCUMENTÁRIO REGIONAL</span>
+                <h3 class="pf-card-title">Caruaru e a feira de braços abertos.</h3>
+                <span class="pf-card-meta">1:00 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-3.mp4" data-poster="assets/img/portfolio/project-2.jpg" data-title="Só Acreditar" data-meta="2:30 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: Só Acreditar">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/portfolio/project-2.jpg" alt="Só Acreditar" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">CAMPANHA DE MARCA</span>
+                <h3 class="pf-card-title">Só Acreditar</h3>
+                <span class="pf-card-meta">2:30 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/video1-hero.mp4" data-poster="assets/img/project-3.jpg" data-title="Natal do Coração" data-meta="1:30 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: Natal do Coração">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/project-3.jpg" alt="Natal do Coração" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">CAMPANHA DE NATAL</span>
+                <h3 class="pf-card-title">Natal do Coração</h3>
+                <span class="pf-card-meta">1:30 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-2.mp4" data-poster="assets/img/Imagem 1.png" data-title="Petrolina e Juazeiro num só coração." data-meta="1:14 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: Petrolina e Juazeiro">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/Imagem 1.png" alt="Petrolina e Juazeiro" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">DOCUMENTÁRIO REGIONAL</span>
+                <h3 class="pf-card-title">Petrolina e Juazeiro num só coração.</h3>
+                <span class="pf-card-meta">1:14 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-3.mp4" data-poster="assets/img/portfolio/project-2.jpg" data-title="Recife tem um coração." data-meta="1:00 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: Recife tem um coração">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/portfolio/project-2.jpg" alt="Recife tem um coração" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">CAMPANHA DE MARCA</span>
+                <h3 class="pf-card-title">Recife tem um coração.</h3>
+                <span class="pf-card-meta">1:00 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/video1-hero.mp4" data-poster="assets/img/project-3.jpg" data-title="A força do campo em imagens que emocionam." data-meta="0:30 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: A força do campo">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/project-3.jpg" alt="A força do campo" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">AGRONEGÓCIO</span>
+                <h3 class="pf-card-title">A força do campo em imagens que emocionam.</h3>
+                <span class="pf-card-meta">0:30 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-2.mp4" data-poster="assets/img/Imagem 1.png" data-title="Capital Mundial do Brinquedo de Miriti." data-meta="1:15 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: Capital Mundial do Brinquedo de Miriti">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/Imagem 1.png" alt="Capital Mundial do Brinquedo de Miriti" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">CULTURA POPULAR</span>
+                <h3 class="pf-card-title">Capital Mundial do Brinquedo de Miriti.</h3>
+                <span class="pf-card-meta">1:15 · Filme</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filmes -->
+      <section class="pf-row-section" id="filmes" aria-label="Filmes e projetos audiovisuais">
+        <div class="container pf-row-header">
+          <h2 class="pf-row-title"><i class="fas fa-film" aria-hidden="true"></i>Filmes</h2>
+          <span class="pf-row-hint">ARRASTE PRO LADO <i class="fas fa-arrow-right"></i></span>
+        </div>
+
+        <div class="pf-row-wrap">
+          <div class="pf-row" data-scroll-row>
+            <article class="pf-card" data-video="assets/videos/video1-hero.mp4" data-poster="assets/img/Imagem 1.png" data-title="40 anos de história, 40 anos de compras." data-meta="0:30 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: 40 anos de história">
+              <div class="pf-card-media">
+                <span class="pf-card-tag">NOVO</span>
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/Imagem 1.png" alt="40 anos de história" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">GRUPO PLURAL</span>
+                <h3 class="pf-card-title">40 anos de história, 40 anos de compras.</h3>
+                <span class="pf-card-meta">0:30 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-2.mp4" data-poster="assets/img/portfolio/project-2.jpg" data-title="A estrada até aqui. 40 anos." data-meta="1:30 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: A estrada até aqui">
+              <div class="pf-card-media">
+                <span class="pf-card-tag">NOVO</span>
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/portfolio/project-2.jpg" alt="A estrada até aqui" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">GRUPO PLURAL</span>
+                <h3 class="pf-card-title">A estrada até aqui. 40 anos.</h3>
+                <span class="pf-card-meta">1:30 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-3.mp4" data-poster="assets/img/project-3.jpg" data-title="São João do Coração 2025" data-meta="Filme" tabindex="0" role="button" aria-label="Abrir vídeo: São João do Coração 2025">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/project-3.jpg" alt="São João do Coração 2025" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">GRUPO PLURAL</span>
+                <h3 class="pf-card-title">São João do Coração 2025</h3>
+                <span class="pf-card-meta">Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/video1-hero.mp4" data-poster="assets/img/Imagem 1.png" data-title="Black Friday Plural" data-meta="1:00 · TV" tabindex="0" role="button" aria-label="Abrir vídeo: Black Friday Plural">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/Imagem 1.png" alt="Black Friday Plural" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">GRUPO PLURAL</span>
+                <h3 class="pf-card-title">Black Friday Plural</h3>
+                <span class="pf-card-meta">1:00 · TV</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-2.mp4" data-poster="assets/img/portfolio/project-2.jpg" data-title="É a cara da gente" data-meta="0:30 · TV" tabindex="0" role="button" aria-label="Abrir vídeo: É a cara da gente">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/portfolio/project-2.jpg" alt="É a cara da gente" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">CASA JOSÉ CENTER</span>
+                <h3 class="pf-card-title">É a cara da gente</h3>
+                <span class="pf-card-meta">0:30 · TV</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/project-3.mp4" data-poster="assets/img/project-3.jpg" data-title="O manifesto da marca." data-meta="0:30 · Filme" tabindex="0" role="button" aria-label="Abrir vídeo: O manifesto da marca">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/project-3.jpg" alt="O manifesto da marca" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">MARCIA COSMÉTICOS</span>
+                <h3 class="pf-card-title">O manifesto da marca.</h3>
+                <span class="pf-card-meta">0:30 · Filme</span>
+              </div>
+            </article>
+
+            <article class="pf-card" data-video="assets/videos/video1-hero.mp4" data-poster="assets/img/Imagem 1.png" data-title="Aniversário Carajás" data-meta="0:30 · TV" tabindex="0" role="button" aria-label="Abrir vídeo: Aniversário Carajás">
+              <div class="pf-card-media">
+                <span class="pf-card-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                <img src="assets/img/Imagem 1.png" alt="Aniversário Carajás" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/640x360/1e293b/94a3b8?text=PLURAL+CRIATIVO';" />
+              </div>
+              <div class="pf-card-body">
+                <span class="pf-card-client">CASA JOSÉ CENTER</span>
+                <h3 class="pf-card-title">Aniversário Carajás</h3>
+                <span class="pf-card-meta">0:30 · TV</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal de Vídeo -->
+    <div id="pfModal" class="pf-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Player de vídeo">
+      <div class="pf-modal-backdrop" data-close-modal></div>
+      <div class="pf-modal-content">
+        <div class="pf-modal-header">
+          <div class="pf-modal-heading">
+            <span class="pf-modal-eyebrow" id="pfModalEyebrow">PORTFÓLIO PLURAL</span>
+            <h3 class="pf-modal-title" id="pfModalTitle"></h3>
+            <span class="pf-modal-meta" id="pfModalMeta"></span>
+          </div>
+          <button class="pf-modal-close" id="pfModalClose" aria-label="Fechar vídeo">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="pf-modal-video-wrap">
+          <video id="pfModalVideo" controls playsinline preload="auto" decoding="async" controlslist="nodownload">
+            Seu navegador não suporta a tag de vídeo.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-line footer-line--top">
+            <p class="footer-copy">
+              &copy; <span id="year"></span> Plural Criativo. Todos os direitos reservados.
+              <span class="footer-sep">·</span>
+              <a href="politicas.html" class="footer-link-inline">Política de Privacidade</a>
+            </p>
+          </div>
+          <div class="footer-line footer-line--social">
+            <a href="https://instagram.com/pluralcriativo" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/company/pluralcriativo/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span>
+            </a>
+            <a href="mailto:atendimento@pluralcriativo.com.br" class="footer-social-link" aria-label="E-mail">
+              <i class="fas fa-envelope" aria-hidden="true"></i><span>atendimento@pluralcriativo.com.br</span>
+            </a>
+          </div>
+        </div>
+        <div class="footer-divider" aria-hidden="true"></div>
+        <div class="footer-bottom">
+          <p class="footer-credit">Desenvolvido por <a href="https://www.instagram.com/ithalo.dev/" target="_blank" rel="noopener noreferrer">Antonio Ithalo</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/portfolio.js"></script>
+</body>
+</html>
